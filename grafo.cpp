@@ -1,5 +1,42 @@
-#include <iomanip>
 #include <iostream>
+#include <string>
+
+using std::string;
+
+/**
+ * Classe que representa um livro. Cada livro possui um título, um autor e
+ * um código.
+ */
+class Livro {
+public:
+  string titulo;
+  string autor;
+  int codigo;
+
+  /**
+   * Construtor da classe. Recebe o título, o autor e o código do livro.
+   */
+  Livro(string titulo, string autor, int codigo) {
+    this->titulo = titulo;
+    this->autor = autor;
+    this->codigo = codigo;
+  }
+
+  /**
+   * Operador de conversão para string. Permite que um objeto da classe Livro
+   * seja convertido para string implicitamente. Exemplo:
+   *
+   * Livro livro("O Senhor dos Anéis", "J. R. R. Tolkien", 1);
+   * string str = livro;
+   *
+   * Ou, de forma implícita:
+   *
+   * std::cout << livro << std::endl;
+   */
+  operator string() const {
+    return titulo + " - " + autor + " (" + std::to_string(codigo) + ")";
+  }
+};
 
 /**
  * Classe que representa o nó de uma árvore. Cada nó possui um valor e dois
@@ -8,7 +45,7 @@
 class NoArvore {
 public:
   /** Valor para esse nó */
-  int valor;
+  Livro *valor;
 
   /** Ponteiro para o filho esquerdo */
   NoArvore *filhoEsquerda = nullptr;
@@ -16,7 +53,7 @@ public:
   /** Ponteiro para o filho direito */
   NoArvore *filhoDireita = nullptr;
 
-  NoArvore(int valor) { this->valor = valor; }
+  NoArvore(Livro *valor) { this->valor = valor; }
 
   /**
    * Destrutor recursivo. Chama o destrutor para os filhos esquerdo e
@@ -29,6 +66,7 @@ public:
   ~NoArvore() {
     delete filhoEsquerda;
     delete filhoDireita;
+    delete valor;
   }
 
   /**
@@ -40,7 +78,7 @@ public:
       filhoDireita->imprimir(indent + 4);
     }
 
-    std::cout << std::setw(indent) << valor << std::endl;
+    std::cout << string(indent, ' ') << string(*valor) << std::endl;
 
     if (filhoEsquerda) {
       filhoEsquerda->imprimir(indent + 4);
@@ -54,11 +92,11 @@ public:
 
   ~Arvore() { delete raiz; }
 
-  void adicionar(int valor) {
+  void adicionar(Livro *valor) {
     // Para implementar
   }
 
-  void remover(int valor) {
+  void remover(Livro *valor) {
     // Para implementar
   }
 
@@ -72,9 +110,20 @@ public:
 int main() {
   Arvore arvore;
 
-  arvore.raiz = new NoArvore(10);
-  arvore.raiz->filhoDireita = new NoArvore(20);
-  arvore.raiz->filhoEsquerda = new NoArvore(5);
+  arvore.raiz =
+      new NoArvore(new Livro("O Senhor dos Anéis", "J. R. R. Tolkien", 1));
+
+  arvore.raiz->filhoDireita =
+      new NoArvore(new Livro("O Hobbit", "J. R. R. Tolkien", 2));
+
+  arvore.raiz->filhoDireita->filhoDireita =
+      new NoArvore(new Livro("O Silmarillion", "J. R. R. Tolkien", 3));
+
+  arvore.raiz->filhoDireita->filhoEsquerda =
+      new NoArvore(new Livro("O escaravelho de ouro", "Edgar Allan Poe", 4));
+
+  arvore.raiz->filhoEsquerda = new NoArvore(
+      new Livro("O Guia do Mochileiro das Galáxias", "Douglas Adams", 5));
 
   arvore.imprimir();
 
