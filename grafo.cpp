@@ -128,24 +128,24 @@ public:
 		}
   }
   
-  NoArvore* rotacao_DD(NoArvore* desb) {
+  NoArvore* rotacao_DD(NoArvore* desb) {//direitadireita(DD)
         NoArvore* aux = desb->filhoEsquerda;
         desb->filhoEsquerda = aux->filhoDireita;
         aux->filhoDireita = desb;
         return aux;
     }
- NoArvore* rotacao_EE(NoArvore* desb) {
+ NoArvore* rotacao_EE(NoArvore* desb) { //esquerdaesquerda(EE)
         NoArvore* aux = desb->filhoDireita;
         desb->filhoEsquerda = aux->filhoEsquerda;
         aux->filhoEsquerda = desb;
         return aux;
     }
-    NoArvore* rotacao_ED(NoArvore* desb) {
+    NoArvore* rotacao_ED(NoArvore* desb) {//esquerdadireita(ED)
         desb->filhoEsquerda = rotacao_EE(desb->filhoEsquerda);
         return rotacao_DD(desb);
     }
 
-    NoArvore* rotacao_DE(NoArvore* desb) {
+    NoArvore* rotacao_DE(NoArvore* desb) {//diereitaesquerda(DE)
         desb->filhoDireita = rotacao_DD(desb->filhoDireita);
         return rotacao_ED(desb);
     }
@@ -164,7 +164,8 @@ public:
 };
 
 int main() {
-  Arvore arvore;
+  Arvore arvore; //arvore do titulo 
+  Arvore arvore2; //arvore por codigo
 
   arvore.raiz =
       new NoArvore(new Livro("O Senhor dos Anéis", "J. R. R. Tolkien", 1));
