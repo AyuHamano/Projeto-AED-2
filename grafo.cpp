@@ -106,7 +106,7 @@ public:
 	void inserirLivro(NoArvore *no, Livro *valor) {
 
     //insere a esquerda
-    if(valor->codigo < no->valor->codigo) {
+    if(valor->titulo < no->valor->titulo) {
 
       if(no->filhoEsquerda == NULL) { 
         no->filhoEsquerda = new NoArvore(valor);
@@ -117,7 +117,7 @@ public:
     }
 
     //insere a direita
-    else if(valor->codigo > no->valor->codigo) {
+    else if(valor->titulo > no->valor->titulo) {
 		    
 			if(no->filhoDireita == NULL) {
 				no->filhoDireita = new NoArvore(valor);
@@ -159,8 +159,7 @@ int main() {
       new Livro("O Guia do Mochileiro das Galáxias", "Douglas Adams", 5));
 
   //teste  adicionar
-  arvore.adicionar(new Livro("O conto da Aia", "Margaret Atwood", 6));
-
+  arvore.adicionar(new Livro("Metamorfose", "Franz Kafka", 6)); //ficará à esquerda 
   arvore.imprimir();
 
   return 0;
