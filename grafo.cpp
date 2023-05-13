@@ -127,6 +127,29 @@ public:
 			}
 		}
   }
+  
+  NoArvore* rotacao_DD(NoArvore* desb) {
+        NoArvore* aux = desb->filhoEsquerda;
+        desb->filhoEsquerda = aux->filhoDireita;
+        aux->filhoDireita = desb;
+        return aux;
+    }
+ NoArvore* rotacao_EE(NoArvore* desb) {
+        NoArvore* aux = desb->filhoDireita;
+        desb->filhoEsquerda = aux->filhoEsquerda;
+        aux->filhoEsquerda = desb;
+        return aux;
+    }
+    NoArvore* rotacao_ED(NoArvore* desb) {
+        desb->filhoEsquerda = rotacao_EE(desb->filhoEsquerda);
+        return rotacao_DD(desb);
+    }
+
+    NoArvore* rotacao_DE(NoArvore* desb) {
+        desb->filhoDireita = rotacao_DD(desb->filhoDireita);
+        return rotacao_ED(desb);
+    }
+    
   /**************************************************************/
 
   void remover(Livro *valor) {
