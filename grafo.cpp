@@ -53,7 +53,13 @@ public:
   /** Ponteiro para o filho direito */
   NoArvore *filhoDireita = nullptr;
 
-  NoArvore(Livro *valor) { this->valor = valor; }
+  /** Altura do no */
+  int altura;
+
+  NoArvore(Livro *valor) { 
+    this->valor = valor;   
+    this->altura = 0; //a implementar
+  }
 
   /**
    * Destrutor recursivo. Chama o destrutor para os filhos esquerdo e
@@ -93,40 +99,75 @@ public:
   ~Arvore() { delete raiz; }
 
 
-  /**funcao de adicionar um elemento na arvore*/
-  void adicionar(Livro *valor) {
+  /******************* funcao de adicionar um elemento nas arvores ******************************/
+  void adicionar(Livro *valor, bool ordenacao) {
     if(raiz == nullptr) {
         raiz = new NoArvore(valor);
     }
     else {
-        inserirLivro(raiz, valor);
+      if(ordenacao) { inserirTitulo(raiz, valor); }
+      else inserirCodigo(raiz, valor);
+        
 		}
   }
-	
-	void inserirLivro(NoArvore *no, Livro *valor) {
+  /*Insere ordenando pelo titulo*/
+	void inserirTitulo(NoArvore *no, Livro *valor) {
 
-    //insere a esquerda
     if(valor->titulo < no->valor->titulo) {
-
-      if(no->filhoEsquerda == NULL) { 
-        no->filhoEsquerda = new NoArvore(valor);
-      }
-      else {
-      inserirLivro(no->filhoEsquerda, valor);
-      }
+      inserirEsquerda(no, valor);
     }
-
-    //insere a direita
     else if(valor->titulo > no->valor->titulo) {
-		    
-			if(no->filhoDireita == NULL) {
-				no->filhoDireita = new NoArvore(valor);
-			}
-			else {
-				inserirLivro(no->filhoDireita, valor);
-			}
+		  inserirDireita(no, valor);
 		}
   }
+
+  /*Insere ordenando pelo codigo*/
+  void inserirCodigo(NoArvore *no, Livro *valor) {
+
+    if(valor->codigo < no->valor->codigo) {
+      inserirEsquerda(no, valor);
+    }
+    else if(valor->codigo > no->valor->codigo) {
+		  inserirDireita(no, valor);
+		}
+  }
+
+  void inserirEsquerda(NoArvore *no, Livro *valor) {
+    if(no->filhoEsquerda == NULL) { 
+        no->filhoEsquerda = new NoArvore(valor);
+    }
+    else {
+      inserirEsquerda(no->filhoEsquerda, valor);
+    }
+  }
+
+  void inserirDireita(NoArvore *no, Livro *valor) {
+    if(no->filhoDireita == NULL) { 
+        no->filhoDireita = new NoArvore(valor);
+    }
+    else {
+      inserirDireita(no->filhoDireita, valor);
+    }
+  }
+/*************************************************************************/
+
+  /*Funcoes de Altura*/
+  int alturaNo(NoArvore *raiz) {
+    if(raiz == NULL){
+        return -1;
+    }
+    else{
+        int esq = alturaNo(raiz->filhoEsquerda);
+        int dir = alturaNo(raiz->filhoDireita);
+        if(esq > dir)
+            return esq + 1;
+        else
+            return dir + 1;
+    }
+  }
+
+
+  /**********************Funcoes de rotacoes (a implementar)************************************/
   
   NoArvore* rotacao_DD(NoArvore* desb) {//direitadireita(DD)
         NoArvore* aux = desb->filhoEsquerda;
@@ -164,27 +205,30 @@ public:
 };
 
 int main() {
-  Arvore arvore; //arvore do titulo 
-  Arvore arvore2; //arvore por codigo
+  Arvore arvoreTitulo; //arvore do titulo 
+  Arvore arvoreCodigo; //arvore por codigo
+  bool codigo = false, titulo = true;
 
-  arvore.raiz =
+  arvoreTitulo.raiz =
       new NoArvore(new Livro("O Senhor dos Anéis", "J. R. R. Tolkien", 1));
 
-  arvore.raiz->filhoDireita =
+  arvoreTitulo.raiz->filhoDireita =
       new NoArvore(new Livro("O Hobbit", "J. R. R. Tolkien", 2));
 
-  arvore.raiz->filhoDireita->filhoDireita =
+  arvoreTitulo.raiz->filhoDireita->filhoDireita =
       new NoArvore(new Livro("O Silmarillion", "J. R. R. Tolkien", 3));
 
-  arvore.raiz->filhoDireita->filhoEsquerda =
+  arvoreTitulo.raiz->filhoDireita->filhoEsquerda =
       new NoArvore(new Livro("O escaravelho de ouro", "Edgar Allan Poe", 4));
 
-  arvore.raiz->filhoEsquerda = new NoArvore(
+  arvoreTitulo.raiz->filhoEsquerda = new NoArvore(
       new Livro("O Guia do Mochileiro das Galáxias", "Douglas Adams", 5));
 
-  //teste  adicionar
-  arvore.adicionar(new Livro("Metamorfose", "Franz Kafka", 6)); //ficará à esquerda 
-  arvore.imprimir();
+  //teste de adicionar livro nas duas arvores
+  arvoreTitulo.adicionar(new Livro("Metamorfose", "Franz Kafka", 6), titulo); 
+  arvoreCodigo.adicionar(new Livro("Metamorfose", "Franz Kafka", 6), codigo); 
+  arvoreTitulo.imprimir();
+  arvoreCodigo.imprimir();
 
   return 0;
 }
