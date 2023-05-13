@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-
+#include <cstring>
 using std::string;
 
 /**
@@ -92,9 +92,42 @@ public:
 
   ~Arvore() { delete raiz; }
 
+
+  /**funcao de adicionar um elemento na arvore*/
   void adicionar(Livro *valor) {
-    // Para implementar
+    if(raiz == nullptr) {
+        raiz = new NoArvore(valor);
+    }
+    else {
+        inserirLivro(raiz, valor);
+		}
   }
+	
+	void inserirLivro(NoArvore *no, Livro *valor) {
+
+    //insere a esquerda
+    if(valor->codigo < no->valor->codigo) {
+
+      if(no->filhoEsquerda == NULL) { 
+        no->filhoEsquerda = new NoArvore(valor);
+      }
+      else {
+      inserirLivro(no->filhoEsquerda, valor);
+      }
+    }
+
+    //insere a direita
+    else if(valor->codigo > no->valor->codigo) {
+		    
+			if(no->filhoDireita == NULL) {
+				no->filhoDireita = new NoArvore(valor);
+			}
+			else {
+				inserirLivro(no->filhoDireita, valor);
+			}
+		}
+  }
+  /**************************************************************/
 
   void remover(Livro *valor) {
     // Para implementar
@@ -124,6 +157,9 @@ int main() {
 
   arvore.raiz->filhoEsquerda = new NoArvore(
       new Livro("O Guia do Mochileiro das Galáxias", "Douglas Adams", 5));
+
+  //teste  adicionar
+  arvore.adicionar(new Livro("O conto da Aia", "Margaret Atwood", 6));
 
   arvore.imprimir();
 
