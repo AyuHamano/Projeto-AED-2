@@ -44,6 +44,7 @@ public:
  */
 class NoArvore {
 public:
+ 
   /** Valor para esse nó */
   Livro *valor;
 
@@ -52,7 +53,8 @@ public:
 
   /** Ponteiro para o filho direito */
   NoArvore *filhoDireita = nullptr;
-
+  int altura;   /** altura do nó */
+  
   NoArvore(Livro *valor) { this->valor = valor; }
 
   /**
