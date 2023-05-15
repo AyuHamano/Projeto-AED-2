@@ -5,7 +5,7 @@ using std::string;
 
 /**
  * Classe que representa um livro. Cada livro possui um título, um autor e
- * um código.
+ * um código.                                                                                                                                                                                                           
  */
 class Livro {
 public:
@@ -93,11 +93,31 @@ public:
   }
 };
 
+enum tipoOrdenacao {
+  titulo,
+  codigo
+};
+
 class Arvore {
 public:
   NoArvore *raiz = nullptr;
 
+  tipoOrdenacao ordenacao;
+
   ~Arvore() { delete raiz; }
+
+  Arvore(tipoOrdenacao ordenacao) {
+    this->ordenacao;
+  }
+
+  int comparaOrd (NoArvore *a, Livro *b) {
+    if(ordenacao == tipoOrdenacao :: codigo) {
+      return a->valor->codigo - b->codigo;
+    }
+    else {
+      return a->valor->titulo.compare(b->titulo);
+    }
+  }
 
 
 /******************* funcao de adicionar um elemento nas arvores ******************************/
@@ -232,8 +252,10 @@ NoArvore* balancearNo(NoArvore *no) {
   }
   NoArvore* rotacaoEsquerda(NoArvore *no) { //esquerda esquerda(EE)
     NoArvore *aux1, *aux2;
+
     aux1 = no->filhoDireita;
     aux2 = aux1->filhoEsquerda;
+
     aux1->filhoEsquerda = no;
     no->filhoDireita = aux2;
 
@@ -266,8 +288,8 @@ NoArvore* balancearNo(NoArvore *no) {
 };
 
 int main() {
-  Arvore arvoreTitulo; //arvore do titulo 
-  Arvore arvoreCodigo; //arvore por codigo
+  Arvore arvoreTitulo(tipoOrdenacao :: titulo); //arvore do titulo 
+  Arvore arvoreCodigo(tipoOrdenacao :: codigo); //arvore por codigo
   bool codigo = false, titulo = true;
 
   arvoreTitulo.raiz =
