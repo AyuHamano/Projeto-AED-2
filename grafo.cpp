@@ -55,11 +55,11 @@ public:
   NoArvore *filhoDireita = nullptr;
 
   /** Altura do no */
-  int altura;
+  short altura;
 
   NoArvore(Livro *valor) { 
     this->valor = valor;   
-    this->altura = 0; //a implementar
+    this->altura = -1; //a implementar
   }
 
   /**
@@ -100,7 +100,7 @@ public:
   ~Arvore() { delete raiz; }
 
 
-  /******************* funcao de adicionar um elemento nas arvores ******************************/
+/******************* funcao de adicionar um elemento nas arvores ******************************/
   void adicionar(Livro *valor, bool ordenacao) {
     if(raiz == nullptr) {
         raiz = new NoArvore(valor);
@@ -108,7 +108,6 @@ public:
     else {
       if(ordenacao) { inserirTitulo(raiz, valor); }
       else inserirCodigo(raiz, valor);
-        
 		}
   }
   /*Insere ordenando pelo titulo*/
@@ -140,6 +139,9 @@ public:
     else {
       inserirEsquerda(no->filhoEsquerda, valor);
     }
+    //calcula a altura do no
+    no->altura = maiorAltura(alturaNo(raiz->filhoEsquerda), alturaNo(raiz->filhoDireita)) + 1;
+    no = balancearNo(no);
   }
 
   void inserirDireita(NoArvore *no, Livro *valor) {
@@ -149,48 +151,106 @@ public:
     else {
       inserirDireita(no->filhoDireita, valor);
     }
+    //calcula a altura do no
+    no->altura = maiorAltura(alturaNo(raiz->filhoEsquerda), alturaNo(raiz->filhoDireita)) + 1;
+    no = balancearNo(no);
   }
 /*************************************************************************/
 
-  /*Funcoes de Altura*/
-  int alturaNo(NoArvore *raiz) {
-    if(raiz == NULL){
+/*Funcao de balanceamento*/
+short calculaFatorBalanceado(NoArvore *no) {
+  if(no) {
+    return (alturaNo(no->filhoEsquerda) - alturaNo(no->filhoDireita));
+  }
+  else return 0;
+}
+
+NoArvore* balancearNo(NoArvore *no) {
+  short bal = calculaAlturaNo(no);
+
+  if(bal < -1 && calculaFatorBalanceado(no->filhoDireita) <=0) { no = rotacaoEsquerda(no); }
+
+  else if(bal < -1 && calculaFatorBalanceado(no->filhoDireita) > 0) { no = rotacaoDireitaEsquerda(no); }
+
+  else if(bal > 1 && calculaFatorBalanceado(no->filhoEsquerda) >=0) { no = rotacaoDireita(no); }
+
+  else if(bal > 1 && calculaFatorBalanceado(no->filhoEsquerda) < 0) { no = rotacaoEsquerdaDireita(no); }
+
+  return no;
+
+}
+
+/*Funcao de Altura*/
+
+  /*retona a altura do no*/
+  short alturaNo(NoArvore *no) {
+    if(no == NULL){
         return -1;
     }
     else{
-        int esq = alturaNo(raiz->filhoEsquerda);
-        int dir = alturaNo(raiz->filhoDireita);
-        if(esq > dir)
-            return esq + 1;
-        else
-            return dir + 1;
+        return no->altura;
+    }
+  }
+
+  short maiorAltura(short altura1, short altura2) {
+    if(altura1 > altura2) { return altura1; }
+
+    else { return altura2; }
+  }
+
+  short calculaAlturaNo(NoArvore *no) {
+    if(no == NULL){
+        return -1;
+    }
+    else{
+        int esq = alturaNo(no->filhoEsquerda);
+        int dir = alturaNo(no->filhoDireita);
+
+        if(esq > dir) { return esq + 1; }
+        else {return dir + 1;}
     }
   }
 
 
-  /**********************Funcoes de rotacoes (a implementar)************************************/
-  
-  NoArvore* rotacao_DD(NoArvore* desb) {//direitadireita(DD)
-        NoArvore* aux = desb->filhoEsquerda;
-        desb->filhoEsquerda = aux->filhoDireita;
-        aux->filhoDireita = desb;
-        return aux;
-    }
- NoArvore* rotacao_EE(NoArvore* desb) { //esquerdaesquerda(EE)
-        NoArvore* aux = desb->filhoDireita;
-        desb->filhoEsquerda = aux->filhoEsquerda;
-        aux->filhoEsquerda = desb;
-        return aux;
-    }
-    NoArvore* rotacao_ED(NoArvore* desb) {//esquerdadireita(ED)
-        desb->filhoEsquerda = rotacao_EE(desb->filhoEsquerda);
-        return rotacao_DD(desb);
-    }
+  /**********************Funcoes de rotacoes (a implementar)**************************/
+  /*explicação sobre balanceamento: https://www.youtube.com/watch?v=oIp82CfCDoQ */
 
-    NoArvore* rotacao_DE(NoArvore* desb) {//diereitaesquerda(DE)
-        desb->filhoDireita = rotacao_DD(desb->filhoDireita);
-        return rotacao_ED(desb);
-    }
+  
+  NoArvore* rotacaoDireita(NoArvore *no) {//direita direita(DD)
+    NoArvore *aux1, *aux2;
+
+    aux1 = no->filhoEsquerda;
+    aux2 = aux1->filhoDireita;
+
+    aux1->filhoDireita = no;
+    no->filhoEsquerda = aux2; 
+
+    no->altura = maiorAltura(alturaNo(no->filhoEsquerda), alturaNo(no->filhoDireita)) + 1;
+    aux1->altura = maiorAltura(alturaNo(aux1->filhoEsquerda), alturaNo(aux1->filhoDireita)) + 1;
+
+    return aux1;
+  }
+  NoArvore* rotacaoEsquerda(NoArvore *no) { //esquerda esquerda(EE)
+    NoArvore *aux1, *aux2;
+    aux1 = no->filhoDireita;
+    aux2 = aux1->filhoEsquerda;
+    aux1->filhoEsquerda = no;
+    no->filhoDireita = aux2;
+
+    no->altura = maiorAltura(alturaNo(no->filhoEsquerda), alturaNo(no->filhoDireita)) + 1;
+    aux1->altura = maiorAltura(alturaNo(aux1->filhoEsquerda), alturaNo(aux1->filhoDireita)) + 1;
+    return aux1;
+  }
+
+  NoArvore* rotacaoEsquerdaDireita(NoArvore* no) {//esquerda direita(ED)
+    no->filhoEsquerda = rotacaoEsquerda(no->filhoEsquerda);
+    return rotacaoDireita(no);
+  }
+
+  NoArvore* rotacaoDireitaEsquerda(NoArvore* no) {//diereita esquerda(DE)
+    no->filhoDireita = rotacaoDireita(no->filhoDireita);
+    return rotacaoEsquerdaDireita(no);
+  }
     
   /**************************************************************/
 
