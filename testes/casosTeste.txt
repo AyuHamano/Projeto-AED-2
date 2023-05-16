@@ -1,1 +1,1014 @@
-o arquivo deve conter 10 mil casos de teste
+
+1.	A Arte da Persuasão
+2.	A Beleza da Natureza
+3.	A Cozinha dos Sabores
+4.	A Dança da Vida
+5.	A Esperança Renovada
+6.	A Fantasia Desvendada
+7.	A Grande Aventura
+8.	A História Proibida
+9.	A Ilha dos Segredos
+10.	A Jornada Incansável
+11.	A Lei do Destino
+12.	A Magia Oculta
+13.	A Noite Estrelada
+14.	A Origem Perdida
+15.	A Paixão Incontrolável
+16.	A Questão Decisiva
+17.	A Razão do Coração
+18.	A Sociedade Revelada
+19.	A Terra dos Sonhos
+20.	A União dos Mundos
+21.	A Viagem Inesquecível
+22.	A Voz do Silêncio
+23.	A Última Fronteira
+24.	Ação e Aventura
+25.	Alma em Ascensão
+26.	Amor Proibido
+27.	Anjos e Arcanjos
+28.	Aprendendo com a Vida
+29.	Aromas da Paixão
+30.	As Cores do Arco-Íris
+31.	As Estrelas Cintilantes
+32.	As Flores do Jardim
+33.	As Grandes Descobertas
+34.	As Horas Perdidas
+35.	As Lendas Antigas
+36.	As Maravilhas da Criação
+37.	As Noites de Verão
+38.	As Palavras Mágicas
+39.	As Quatro Estações
+40.	As Ruas da Cidade
+41.	Asas da Liberdade
+42.	Até o Fim do Mundo
+43.	Aventuras Além do Horizonte
+44.	Aventuras Submarinas
+45.	Ação em Alto Mar
+46.	Aço e Fogo
+47.	Açúcar e Especiarias
+48.	Açúcar Queimado
+49.	Açúcar Refinado
+50.	Águas Profundas
+51.	Além das Montanhas
+52.	Além do Infinito
+53.	Além dos Limites
+54.	Alquimia do Amor
+55.	Amizade Verdadeira
+56.	Amor em Chamas
+57.	Amor e Desafios
+58.	Amor Eterno
+59.	Amor Proibido
+60.	Amor Sem Fronteiras
+61.	Amores Perdidos
+62.	Aromas da Natureza
+63.	Aromas e Sabores
+64.	Arquitetura do Futuro
+65.	Arte e Criatividade
+66.	Asas da Imaginação
+67.	Asas do Tempo
+68.	Atos de Bondade
+69.	Atrás das Cortinas
+70.	Autossuperação
+71.	Avanços Científicos
+72.	Aventuras no Espaço
+73.	Aventuras no Mundo Animal
+74.	Aventuras Perigosas
+75.	Aventuras na Floresta
+76.	Aventuras no Deserto
+77.	Aventuras nas Montanhas
+78.	Aventuras na Selva
+79.	Aventuras Secretas
+80.	Aventuras Sobrenaturais
+81.	Ação e Suspense
+82.	Ação Heroica
+83.	Ação em Dose Dupla
+84.	Beleza Interior
+85.	Brilho da Aurora
+86.	Busca pelo Tesouro
+87.	Baladas de Amor
+88.	Baús de Segredos
+89.	Beijos Roubados
+90.	Batalha dos Sonhos
+91.	Brisa do Mar
+92.	Brincando com o Destino
+93.	Brechas do Tempo
+94.	Belas Mentiras
+95.	Buscando Respostas
+96.	Brumas da Paixão
+97.	Beleza Eterna
+98.	Baile de Máscaras
+99.	Brigas e Amores
+100.	Brilho no Escuro
+101.	Belezas Naturais
+102.	Brilho da Lua
+103.	Bússola do Coração
+104.	Brilho no Olhar
+105.	Bênçãos Divinas
+106.	Baile das Estrelas
+107.	Baladas da Juventude
+108.	Beijos Proibidos
+109.	Brisa Suave
+110.	Bravura e Honra
+111.	Buscando a Liberdade
+112.	Bruxas e Feitiços
+113.	Brincando com Fogo
+114.	Beleza Intensa
+115.	Brumas da Memória
+116.	Baús de Histórias
+117.	Beija-Flor Encantado
+118.	Batalha Interior
+119.	Brilho da Esperança
+120.	Brisa do Entardecer
+121.	Belezas Ocultas
+122.	Brilho no Abismo
+123.	Buscando o Paraíso
+124.	Bem-Vindos ao Inferno
+125.	Brisa da Manhã
+126.	Brumas do Passado
+127.	Beijos Ardentes
+128.	Bruxas da Noite
+129.	Brilho na Escuridão
+130.	Baile dos Sonhos
+131.	Baladas da Alma
+132.	Belezas Selvagens
+133.	Brilho nas Estrelas
+134.	Brilho da Vida
+135.	Batalha dos Corações
+136.	Brisa da Liberdade
+137.	Beija-Flor em Flor
+138.	Brumas do Amor
+139.	Baús de Lembranças
+140.	Beijos da Meia-Noite
+141.	Bruxas Modernas
+142.	Brilho no Céu
+143.	Buscando a Verdade
+144.	Bem-Vindos à Loucura
+145.	Brisa do Verão
+146.	Brumas do Silêncio
+147.	Beijos Prodigiosos
+148.	Brilho nas Águas
+149.	Brilho da Felicidade
+150.	Batalha da Superação
+151.	Brisa da Montanha
+152.	Belezas Inesquecíveis
+153.	Brilho no Horizonte
+154.	Brumas da Solidão
+155.	Baús de Emoções
+156.	Beijos Desenfreados
+157.	Bruxas do Destino
+158.	Brilho Noturno
+159.	Buscando a Redenção
+160.	Bem-Vindos ao Caos
+161.	Brisa da Primavera
+162.	Brumas do Desejo
+163.	Beijos Ressurgidos
+164.	Brilho nas Pedras
+165.	Brilho da Superação
+166.	Batalha do Amor
+167.	Brisa da Inspiração
+168.	Belezas Radiantes
+169.	Caminhos da Vida
+170.	Corações Partidos
+171.	Cidades Perdidas
+172.	Canto da Esperança
+173.	Círculos do Destino
+174.	Conquistas da Alma
+175.	Confissões de Amor
+176.	Caçadores de Tesouros
+177.	Contos Fantásticos
+178.	Cidades em Ruínas
+179.	Coragem e Determinação
+180.	Céu Estrelado
+181.	Chamas da Paixão
+182.	Cores da Natureza
+183.	Criaturas Mágicas
+184.	Caçada Implacável
+185.	Caminhos do Passado
+186.	Confissões Secretas
+187.	Céu de Outono
+188.	Canções da Vida
+189.	Código da Verdade
+190.	Ciclos da Existência
+191.	Coragem Silenciosa
+192.	Cidades Encantadas
+193.	Conexões Inesperadas
+194.	Contos Infantis
+195.	Chamas da Vingança
+196.	Corrida pelo Tempo
+197.	Chaves do Mistério
+198.	Canto da Liberdade
+199.	Cidade dos Sonhos
+200.	Coragem à Flor da Pele
+201.	Caos e Destruição
+202.	Caminhos Esquecidos
+203.	Confusões Amorosas
+204.	Céu de Inverno
+205.	Criaturas do Abismo
+206.	Conflitos Internos
+207.	Conquistas Inalcançáveis
+208.	Círculo de Amizade
+209.	Caminhos da Solidão
+210.	Código do Amor
+211.	Cicatrizes do Passado
+212.	Chamas da Redenção
+213.	Cidades em Movimento
+214.	Corações em Chamas
+215.	Contos de Fadas
+216.	Conquistas Supremas
+217.	Céu de Verão
+218.	Contratempos do Destino
+219.	Caçadores de Sonhos
+220.	Caminhos da Superação
+221.	Confissões Obscuras
+222.	Círculos da Vida
+223.	Coragem à Beira do Abismo
+224.	Cidades Proibidas
+225.	Conexões Perdidas
+226.	Contos de Mistério
+227.	Chamas da Tentação
+228.	Coração Indomável
+229.	Caos no Paraíso
+230.	Caminhos da Esperança
+231.	Confissões Proibidas
+232.	Céu de Primavera
+233.	Criaturas da Noite
+234.	Cidades Secretas
+235.	Corações Despedaçados
+236.	Contos de Aventura
+237.	Conexões Eternas
+238.	Círculo do Destino
+239.	Caminhos da Transformação
+240.	Corações em Guerra
+241.	Canto da Melancolia
+242.	Cidades Encobertas
+243.	Confissões Ocultas
+244.	Céu de Estrelas
+245.	Criaturas da Imaginação
+246.	Contratempos do Amor
+247.	Corrida pela Liberdade
+248.	Caos no Horizonte
+249.	Caminhos do Amor
+250.	Confissões Silenciosas
+251.	Círculos da Paixão
+252.	Cidades em Chamas
+253.	Corações Apaixonados
+254.	Despertar da Alma
+255.	Destinos Cruzados
+256.	Desejos Secretos
+257.	Dança das Emoções
+258.	Desafios da Vida
+259.	Descobertas Surpreendentes
+260.	De Volta ao Passado
+261.	Desejos Proibidos
+262.	Destino Incerto
+263.	Domínio das Sombras
+264.	Diamantes do Destino
+265.	Danças da Noite
+266.	Desejos Ocultos
+267.	Dose de Aventura
+268.	Desejos e Enganos
+269.	Devaneios da Imaginação
+270.	Despedaçando Barreiras
+271.	Dádivas do Amor
+272.	Dançando com o Perigo
+273.	Destino em Jogo
+274.	Delírios da Paixão
+275.	Doce Amargura
+276.	Descobrindo Verdades
+277.	Desejos Incontroláveis
+278.	Desejos que Incendeiam
+279.	Destino Traçado
+280.	Despertar da Consciência
+281.	Deixando o Passado para Trás
+282.	Desafios do Coração
+283.	Dançando Sob a Lua
+284.	Desejos Impossíveis
+285.	Dose de Mistério
+286.	Desejos em Chamas
+287.	Destino e Redenção
+288.	Danças da Alma
+289.	Doce Pecado
+290.	Desvendando Enigmas
+291.	Dose de Adrenalina
+292.	Desejos Roubados
+293.	Desejos que Transformam
+294.	Deixando a Dor para Trás
+295.	Desafios do Destino
+296.	Dançando com as Estrelas
+297.	Desejos Intensos
+298.	Destino de Guerreiros
+299.	Delícias do Amor
+300.	Despertar da Paixão
+301.	Dose de Suspense
+302.	Desejos Vingativos
+303.	Desejos Imortais
+304.	Destinos Entrelaçados
+305.	Dançando na Escuridão
+306.	Desejos Selvagens
+307.	Desvendando Segredos
+308.	Doce Ilusão
+309.	Desafios da Superação
+310.	Deixando o Medo para Trás
+311.	Dose de Perigo
+312.	Desejos Obscuros
+313.	Desejos que Consomem
+314.	Destino Indomável
+315.	Dançando com a Sorte
+316.	Desejos Fatais
+317.	Despertar dos Sentidos
+318.	Doce Sedução
+319.	Desvendando Mistérios
+320.	Dose de Ação
+321.	Desejos Imprevisíveis
+322.	Destino Ardente
+323.	Dançando nas Ondas
+324.	Desejos Inesquecíveis
+325.	Desafios do Amor Próprio
+326.	Deixando o Passado no Passado
+327.	Dose de Emoção
+328.	Desejos Noturnos
+329.	Desejos que Transformam Vidas
+330.	Destinos Desconhecidos
+331.	Danças do Coração
+332.	Doce Proibição
+333.	Despertar do Desejo
+334.	Dose de Mistério e Romance
+335.	Desejos Irresistíveis
+336.	Destino Selvagem
+337.	Em Busca da Verdade
+338.	Enigmas do Destino
+339.	Entre o Amor e a Razão
+340.	Escritos da Alma
+341.	Estrelas da Noite
+342.	Emoções Desenfreadas
+343.	Encantos da Natureza
+344.	Essência do Ser
+345.	Escolhas Decisivas
+346.	Ecos do Passado
+347.	Encontros Inesperados
+348.	Escuridão e Luz
+349.	Estações da Vida
+350.	Emoções à Flor da Pele
+351.	Elos do Destino
+352.	Encantamentos Mágicos
+353.	Entre o Céu e a Terra
+354.	Estrelas Cadentes
+355.	Emoções Proibidas
+356.	Ecos da Memória
+357.	Enigmas do Amor
+358.	Eternidade no Olhar
+359.	Explorando Horizontes
+360.	Encantos Perdidos
+361.	Entrelinhas da Vida
+362.	Estrelas Distantes
+363.	Emoções Ocultas
+364.	Encruzilhada do Destino
+365.	Esplendor da Natureza
+366.	Enigmas da Existência
+367.	Escolhas do Coração
+368.	Ecos da Imaginação
+369.	Encontros Marcados
+370.	Estrelas Brilhantes
+371.	Emoções Vibrantes
+372.	Entre o Sonho e a Realidade
+373.	Encantos da Magia
+374.	Essência da Felicidade
+375.	Elos Partidos
+376.	Explorando Mistérios
+377.	Enigmas do Passado
+378.	Ecos do Silêncio
+379.	Encantos da Aventura
+380.	Entre Risos e Lágrimas
+381.	Estrelas Radiantes
+382.	Emoções Despedaçadas
+383.	Entre Mundos Paralelos
+384.	Eternidade no Tempo
+385.	Explorando a Imaginação
+386.	Enigmas da Alma
+387.	Escolhas Transformadoras
+388.	Ecos do Amor
+389.	Encantos do Crepúsculo
+390.	Entrelinhas do Destino
+391.	Estrelas em Ascensão
+392.	Emoções Prodigiosas
+393.	Encruzilhadas da Vida
+394.	Essência do Amor
+395.	Elos Inquebráveis
+396.	Explorando Possibilidades
+397.	Enigmas do Coração
+398.	Ecos da Natureza
+399.	Encantos do Luar
+400.	Entrelinhas do Tempo
+401.	Estrelas Fulgurantes
+402.	Emoções Desafiadoras
+403.	Entrelinhas da Paixão
+404.	Eternidade no Amor
+405.	Explorando o Desconhecido
+406.	Enigmas da Imaginação
+407.	Escolhas Inevitáveis
+408.	Ecos da Aventura
+409.	Encantos da Fantasia
+410.	Entrelinhas do Destino
+411.	Estrelas Reluzentes
+412.	Emoções Resplandecentes
+413.	Entre Palavras e Silêncios
+414.	Eternidade na Alma
+415.	Explorando a Natureza
+416.	Enigmas da Vida
+417.	Escolhas Difíceis
+418.	Ecos do Passado
+419.	Encantos do Amanhecer
+420.	Fragmentos de Amor
+421.	Flores no Jardim
+422.	Fios do Destino
+423.	Fogo da Paixão
+424.	Filhos da Esperança
+425.	Fuga da Realidade
+426.	Fadas e Encantamentos
+427.	Folhas ao Vento
+428.	Feitiços do Amor
+429.	Fortaleza da Alma
+430.	Farsas do Destino
+431.	Fim do Silêncio
+432.	Fios da Memória
+433.	Fragmentos de Sonhos
+434.	Fugindo da Escuridão
+435.	Fantasias Secretas
+436.	Fronteiras do Amor
+437.	Fios da Vida
+438.	Fuga para o Paraíso
+439.	Fases da Lua
+440.	Fios do Tempo
+441.	Feridas da Alma
+442.	Fúria e Redenção
+443.	Filhas da Esperança
+444.	Fragmentos do Passado
+445.	Fugindo do Destino
+446.	Fogo da Vingança
+447.	Feitiços Proibidos
+448.	Fortaleza do Coração
+449.	Farsas da Vida
+450.	Fim da Ilusão
+451.	Fios do Destino
+452.	Fragmentos de Esperança
+453.	Fugindo da Realidade
+454.	Fantasmas do Passado
+455.	Fronteiras da Paixão
+456.	Fios da Imaginação
+457.	Fuga dos Sonhos
+458.	Flores da Primavera
+459.	Fúria Implacável
+460.	Filhos da Liberdade
+461.	Fragmentos do Amor
+462.	Fugindo do Medo
+463.	Fios da Superação
+464.	Feitiços do Destino
+465.	Fortaleza da Vontade
+466.	Farsas da Ilusão
+467.	Fim do Mistério
+468.	Fios da Transformação
+469.	Fuga das Sombras
+470.	Fantasias Desvendadas
+471.	Fronteiras do Desejo
+472.	Fios da Esperança
+473.	Fuga para o Desconhecido
+474.	Flores do Verão
+475.	Fúria dos Deuses
+476.	Filhos da Revolução
+477.	Fragmentos da Vida
+478.	Fugindo da Solidão
+479.	Fios da Redenção
+480.	Feitiços da Alma
+481.	Fortaleza dos Sonhos
+482.	Farsas do Coração
+483.	Fim da Escuridão
+484.	Fios da Aventura
+485.	Fuga dos Segredos
+486.	Fantasias Proibidas
+487.	Fronteiras da Coragem
+488.	Fios da Liberdade
+489.	Fuga para o Infinito
+490.	Flores do Outono
+491.	Fúria Incontrolável
+492.	Filhos da Esperança
+493.	Fragmentos do Destino
+494.	Fugindo do Passado
+495.	Fios da Memória
+496.	Feitiços do Amor Eterno
+497.	Fortaleza do Perdão
+498.	Farsas do Tempo
+499.	Fim do Silêncio
+500.	Fios do Destino
+501.	Fragmentos de Sonhos
+502.	Fugindo da Escuridão
+503.	Fantasias Secretas
+504.	Fronteiras do Amor
+505.	Fios da Vida
+506.	Fuga para o Paraíso
+507.	Fases da Lua
+508.	Fios
+509.	Guardiões do Destino
+510.	Galáxias Perdidas
+511.	Gritos Silenciosos
+512.	Garotas Irresistíveis
+513.	Gravidade das Emoções
+514.	Gênios da Ciência
+515.	Guerra dos Mundos
+516.	Gaiola de Ouro
+517.	Grandes Mistérios
+518.	Guerreiros da Luz
+519.	Graciosas Aventuras
+520.	Gravando Memórias
+521.	Gargantas da Noite
+522.	Geração Futura
+523.	Garotas Poderosas
+524.	Guia da Sobrevivência
+525.	Gritos do Passado
+526.	Gênios da Arte
+527.	Guerreiros da Esperança
+528.	Garotas Rebeldes
+529.	Gravidade da Paixão
+530.	Guia dos Sonhos
+531.	Gritos da Alma
+532.	Garotos Perdidos
+533.	Guardiões da Magia
+534.	Galáxias Distantes
+535.	Grãos de Sabedoria
+536.	Guerra dos Corações
+537.	Gargalhadas na Chuva
+538.	Gravando Sentimentos
+539.	Garotas Desafiadoras
+540.	Gritos da Liberdade
+541.	Gênios da Literatura
+542.	Guerreiros do Amor
+543.	Graciosas Lembranças
+544.	Guia do Conhecimento
+545.	Garotas Poderosas
+546.	Gravidade dos Sonhos
+547.	Gritos do Silêncio
+548.	Guardiões da Imaginação
+549.	Galáxias em Colisão
+550.	Grãos de Felicidade
+551.	Guerra dos Sentimentos
+552.	Gargalhadas Eternas
+553.	Gênios da Música
+554.	Guerreiros da Coragem
+555.	Graciosos Encontros
+556.	Guardiões da Natureza
+557.	Garotas Rebeldes
+558.	Gravidade do Destino
+559.	Guia das Estrelas
+560.	Gritos do Coração
+561.	Garotos Perdidos
+562.	Guardiões da História
+563.	Galáxias Desconhecidas
+564.	Grãos de Inspiração
+565.	Guerra dos Sonhos
+566.	Gargalhadas ao Vento
+567.	Gênios da Filosofia
+568.	Guerreiros da Determinação
+569.	Graciosos Reencontros
+570.	Guardiões da Aventura
+571.	Garotas Destemidas
+572.	Gravidade da Vida
+573.	Guia dos Caminhos
+574.	Gritos da Verdade
+575.	Garotos Desafiadores
+576.	Guardiões da Fantasia
+577.	Galáxias Fascinantes
+578.	Grãos de Esperança
+579.	Guerra dos Desejos
+580.	Gargalhadas Infinitas
+581.	Gênios da História
+582.	Guerreiros da Transformação
+583.	Graciosas Descobertas
+584.	Guardiões do Conhecimento
+585.	Garotas Inspiradoras
+586.	Gravidade do Amor
+587.	Guia dos Sentimentos
+588.	Gritos da Consciência
+589.	Histórias de Amor
+590.	Heranças Perdidas
+591.	Horizontes Distantes
+592.	Heróis da Vida
+593.	Harpas Celestiais
+594.	Horas de Solidão
+595.	Histórias Proibidas
+596.	Horizonte Infinito
+597.	Herdeiros da Esperança
+598.	Harmonias da Natureza
+599.	Heranças Obscuras
+600.	Horizontes da Imaginação
+601.	Heróis da Liberdade
+602.	Horas de Paixão
+603.	Histórias Secretas
+604.	Horizonte Radiante
+605.	Herdeiros do Destino
+606.	Harmonia dos Sentidos
+607.	Heranças Esquecidas
+608.	Horizontes da Vida
+609.	Heróis da Aventura
+610.	Horas de Desespero
+611.	Histórias Desconhecidas
+612.	Horizonte Sereno
+613.	Herdeiros da Magia
+614.	Harmonia dos Sonhos
+615.	Heranças Perigosas
+616.	Horizontes da Alma
+617.	Heróis da Fantasia
+618.	Horas de Angústia
+619.	Histórias Prodigiosas
+620.	Horizonte Deslumbrante
+621.	Herdeiros da Paixão
+622.	Harmonia dos Corações
+623.	Heranças Reveladas
+624.	Horizontes da Felicidade
+625.	Heróis da Superação
+626.	Horas de Reflexão
+627.	Histórias Esquecidas
+628.	Horizonte Eterno
+629.	Herdeiros do Amor
+630.	Harmonia dos Sentimentos
+631.	Heranças Desafiadoras
+632.	Horizontes da Superação
+633.	Heróis da Coragem
+634.	Horas de Esperança
+635.	Histórias Deslumbrantes
+636.	Horizonte Magnífico
+637.	Herdeiros da Imaginação
+638.	Harmonia dos Destinos
+639.	Heranças Dolorosas
+640.	Horizontes da Transformação
+641.	Heróis da Conquista
+642.	Horas de Ilusão
+643.	Histórias Fantásticas
+644.	Horizonte Acolhedor
+645.	Herdeiros do Mistério
+646.	Harmonia dos Sonhos
+647.	Heranças Inesquecíveis
+648.	Horizontes da Coragem
+649.	Heróis da Determinação
+650.	Horas de Adversidade
+651.	Histórias Inspiradoras
+652.	Horizonte Brilhante
+653.	Herdeiros da Natureza
+654.	Harmonia dos Instantes
+655.	Heranças Eternas
+656.	Horizontes da Sabedoria
+657.	Heróis da Esperança
+658.	Horas de Felicidade
+659.	Histórias Marcantes
+660.	Horizonte Desafiador
+661.	Herdeiros do Destino
+662.	Harmonia dos Encontros
+663.	Heranças Despedaçadas
+664.	Horizontes da Renovação
+665.	Heróis da Transformação
+666.	Horas de Liberdade
+667.	Histórias Notáveis
+668.	Horizonte Sereno
+669.	Herdeiros da Magia
+670.	Harmonia dos Momentos
+671.	Heranças Proibidas
+672.	Ilusões Perdidas
+673.	Imensidão dos Sonhos
+674.	Inocência Roubada
+675.	Império das Sombras
+676.	Infinito Amor
+677.	Inverno da Alma
+678.	Ícones da História
+679.	Inspirações Divinas
+680.	Indomável Coração
+681.	Imagens da Vida
+682.	Ilha dos Segredos
+683.	Incertezas do Destino
+684.	Insônia Noturna
+685.	Infância Colorida
+686.	Inesperada Traição
+687.	Identidades Ocultas
+688.	Incandescente Paixão
+689.	Infinitas Possibilidades
+690.	Inquietude do Coração
+691.	Imortalidade Almejada
+692.	Inocência Despedaçada
+693.	Ilusões do Passado
+694.	Inesquecível Aventura
+695.	Inverno de Esperança
+696.	Ícones da Cultura
+697.	Inspirações Poéticas
+698.	Indomável Destino
+699.	Imaginação Fértil
+700.	Incógnitas do Amor
+701.	Infindáveis Horizontes
+702.	Ilha do Esquecimento
+703.	Incertezas do Tempo
+704.	Infinito Abraço
+705.	Inocência Roubada
+706.	Império das Emoções
+707.	Insensível Despedida
+708.	Imagens do Passado
+709.	Ilusões Perdidas
+710.	Inocência Reconquistada
+711.	Incógnitas da Vida
+712.	Inverno de Lembranças
+713.	Ícones da Literatura
+714.	Inspirações do Coração
+715.	Indomáveis Sonhos
+716.	Imaginação Colorida
+717.	Incertezas do Destino
+718.	Inquebrável Vínculo
+719.	Infinita Eternidade
+720.	Inocência Ferida
+721.	Ilusões Desfeitas
+722.	Inesperada Reviravolta
+723.	Incandescente Desejo
+724.	Infinitas Conquistas
+725.	Inquietude da Alma
+726.	Imortalidade Alcançada
+727.	Inocência Perdida
+728.	Ilha do Mistério
+729.	Inverno de Amor
+730.	Ícones da Arte
+731.	Inspirações do Destino
+732.	Indomável Paixão
+733.	Imaginação Selvagem
+734.	Incógnitas do Passado
+735.	Infindáveis Lembranças
+736.	Ilusões Despedaçadas
+737.	Inocência Traída
+738.	Império dos Sentidos
+739.	Insensível Adeus
+740.	Imagens da Jornada
+741.	Ilusões Renovadas
+742.	Inocência Reconstruída
+743.	Incertezas do Caminho
+744.	Infinito Encontro
+745.	Inesperada Esperança
+746.	Indomáveis Anseios
+747.	Imaginação Brilhante
+748.	Incógnitas do Futuro
+749.	Inverno de Recomeço
+750.	Ícones da Inspiração
+751.	Inspirações Celestiais
+752.	Indomável Espírito
+753.	Infinitos Mistérios
+754.	Jardim de Rosas
+755.	Jogo da Vida
+756.	Justiça Divina
+757.	Jornada Perdida
+758.	Janela para o Mundo
+759.	Juramentos Quebrados
+760.	Jovens e Rebeldes
+761.	Jardim Secreto
+762.	Juntos para Sempre
+763.	Jornal das Sombras
+764.	Jogo do Destino
+765.	Justiça Imortal
+766.	Jardim dos Sonhos
+767.	Jóia Rara
+768.	Jornada ao Desconhecido
+769.	Janela da Alma
+770.	Jurisdição Fatal
+771.	Jovens Brilhantes
+772.	Jardim das Paixões
+773.	Juramentos Eternos
+774.	Jogo Perigoso
+775.	Jornal do Mistério
+776.	Jovens na Escuridão
+777.	Jardim das Lembranças
+778.	Justiça em Chamas
+779.	Jornada pela Liberdade
+780.	Janela do Tempo
+781.	Jurisdição Oculta
+782.	Jovens Destemidos
+783.	Jardim das Ilusões
+784.	Jogo de Máscaras
+785.	Justiça Cega
+786.	Jornada Solitária
+787.	Janela para o Passado
+788.	Jovens no Limiar
+789.	Jardim dos Segredos
+790.	Juramentos Esquecidos
+791.	Jogo da Sedução
+792.	Jornal das Memórias
+793.	Justiça Inabalável
+794.	Jardim dos Sentidos
+795.	Jóia do Deserto
+796.	Jornada da Esperança
+797.	Janela da Imaginação
+798.	Jovens em Fuga
+799.	Jardim dos Desejos
+800.	Juramentos Proibidos
+801.	Jogo da Traição
+802.	Jornal dos Pesadelos
+803.	Justiça em Ruínas
+804.	Jardim das Recordações
+805.	Jóia do Tempo
+806.	Jornada Desafiadora
+807.	Janela da Verdade
+808.	Jovens na Escuridão
+809.	Jardim dos Segredos
+810.	Juramentos Partidos
+811.	Jogo da Sobrevivência
+812.	Jornal dos Sonhos
+813.	Justiça em Queda
+814.	Jardim dos Sentimentos
+815.	Jóia da Paixão
+816.	Jornada do Coração
+817.	Janela da Vida
+818.	Jovens no Abismo
+819.	Jardim das Ilusões
+820.	Juramentos Selados
+821.	Jogo da Obsessão
+822.	Jornal das Revelações
+823.	Justiça Fragilizada
+824.	Jardim dos Enigmas
+825.	Jóia do Amor
+826.	Jornada Interminável
+827.	Janela dos Segredos
+828.	Jovens em Conflito
+829.	Jardim dos Encantos
+830.	Juramentos Secretos
+831.	Jogo do Silêncio
+832.	Jornal das Emoções
+833.	Justiça em Suspenso
+834.	Jardim dos Suspiros
+835.	Jóia da Liberdade
+836.	Luzes da Cidade
+837.	Labirinto de Ilusões
+838.	Lembranças Perdidas
+839.	Lua Cheia
+840.	Livre para Sonhar
+841.	Lendas Antigas
+842.	Lições do Passado
+843.	Laços Inquebráveis
+844.	Lágrimas de Amor
+845.	Liberdade Interior
+846.	Longe de Casa
+847.	Lendas Urbanas
+848.	Luz da Esperança
+849.	Lua de Prata
+850.	Livros Proibidos
+851.	Lealdade Traída
+852.	Laços de Sangue
+853.	Lágrimas de Felicidade
+854.	Lendas do Oeste
+855.	Luzes da Noite
+856.	Lua Negra
+857.	Labirinto de Mistérios
+858.	Lembranças Esquecidas
+859.	Livre Arbítrio
+860.	Laços Eternos
+861.	Lágrimas de Saudade
+862.	Lendas do Mar
+863.	Luzes da Alma
+864.	Lua de Sangue
+865.	Livros Encantados
+866.	Lealdade Testada
+867.	Labirinto do Medo
+868.	Lembranças Amargas
+869.	Liberdade Proibida
+870.	Longa Jornada
+871.	Lendas Esquecidas
+872.	Luzes da Vida
+873.	Lua Azul
+874.	Livros Malditos
+875.	Laços Perdidos
+876.	Lágrimas do Passado
+877.	Lendas da Magia
+878.	Luzes da Cidade
+879.	Lua Dourada
+880.	Livros Amaldiçoados
+881.	Lealdade Profunda
+882.	Labirinto da Mente
+883.	Lembranças Distantes
+884.	Liberdade Almejada
+885.	Longas Noites
+886.	Lendas Perigosas
+887.	Luzes da Eternidade
+888.	Lua Crescente
+889.	Livros Encarcerados
+890.	Laços Desfeitos
+891.	Lágrimas de Angústia
+892.	Lendas da Mitologia
+893.	Luzes da Inspiração
+894.	Lua de Cristal
+895.	Livros Prodigiosos
+896.	Lealdade Perdida
+897.	Labirinto das Sombras
+898.	Lembranças Despedaçadas
+899.	Liberdade Roubada
+900.	Longos Caminhos
+901.	Lendas Esquecidas
+902.	Luzes da Consciência
+903.	Lua de Outono
+904.	Livros Esquecidos
+905.	Laços Despedaçados
+906.	Lágrimas de Redenção
+907.	Lendas da Fantasia
+908.	Luzes do Infinito
+909.	Lua Encantada
+910.	Livros Proibitivos
+911.	Lealdade Traída
+912.	Labirinto do Tempo
+913.	Lembranças Ocultas
+914.	Liberdade Reconquistada
+915.	Longas Viagens
+916.	Lendas do Tempo
+917.	Luzes do Firmamento
+918.	Lua de Inverno
+919.	Livros Roubados
+920.	Laços Eternos
+921.	Lágrimas de Libertação
+922.	Lendas da Natureza
+923.	Luzes da Inspiração
+924.	Memórias de um Viajante
+925.	Mistérios do Tempo
+926.	Meu Amor Proibido
+927.	Mundos Paralelos
+928.	Marcas da Traição
+929.	Maré Alta
+930.	Mentes Brilhantes
+931.	Magia Perdida
+932.	Mulheres do Destino
+933.	Milagre nas Entrelinhas
+934.	Morte e Renascimento
+935.	Mergulho Profundo
+936.	Meu Lugar no Mundo
+937.	Mar de Possibilidades
+938.	Máscaras da Noite
+939.	Mistérios do Passado
+940.	Música da Alma
+941.	Meu Coração em Segredo
+942.	Marca da Vingança
+943.	Melodia da Paixão
+944.	Memórias Esquecidas
+945.	Mundos em Colisão
+946.	Mistério nas Sombras
+947.	Magia e Encantamento
+948.	Mentes Inquietas
+949.	Meu Eterno Amor
+950.	Marés Agitadas
+951.	Marcas do Destino
+952.	Morte na Escuridão
+953.	Mistério Subterrâneo
+954.	Música do Silêncio
+955.	Meu Refúgio Secreto
+956.	Marca do Passado
+957.	Mil Versos de Amor
+958.	Memórias Perdidas
+959.	Mundos Distantes
+960.	Mulheres de Coragem
+961.	Mistérios do Abismo
+962.	Magia Proibida
+963.	Meu Destino Incerto
+964.	Marés Revoltas
+965.	Marcas do Tempo
+966.	Morte na Noite
+967.	Mistério Desvendado
+968.	Música do Coração
+969.	Meu Pequeno Paraíso
+970.	Marca da Ilusão
+971.	Melodia da Liberdade
+972.	Memórias Despedaçadas
+973.	Mundos em Guerra
+974.	Mulheres sem Limites
+975.	Mistérios da Alquimia
+976.	Magia Encantadora
+977.	Mentes Sombrias
+978.	Meu Eterno Refúgio
+979.	Marés Tranquilas
+980.	Marcas do Passado
+981.	Morte no Horizonte
+982.	Mistério Revelado
+983.	Música do Destino
+984.	Meu Segredo Mais Profundo
+985.	Marca da Redenção
+986.	Melodia da Esperança
+987.	Memórias Escondidas
+988.	Mundos em Colapso
+989.	Mulheres no Poder
+990.	Mistérios da Escuridão
+991.	Magia dos Sonhos
+992.	Mentes Poderosas
+993.	Meu Grande Amor
+994.	Marés Silenciosas
+995.	Marcas Indeléveis
+996.	Morte em Versos
+997.	Mistério Abandonado
+998.	Música do Silêncio
+999.	Meu Refúgio Perfeito
+1000.	Marca da Traição
+1001.	Melodia da Melancolia
+1002.	Memórias Reveladas
+1003.	Mundos em Conflito
+1004.	Mulheres na História
+1005.	Mistérios da Vida
+1006.	Magia Despertada
+1007.	Mentes Brilhantes
+
+
+
+
+
+
