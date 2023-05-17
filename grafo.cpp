@@ -102,70 +102,46 @@ public:
   ~Arvore() { delete raiz; }
 
 
-/******************* funcao de adicionar um elemento nas arvores ******************************/
+
+//---- ADIÇÃO DE UM LIVRO
+
   void adicionar(Livro *valor) {
     if(raiz==nullptr) {
       raiz = new NoArvore(valor);
     }
     else {
-      inserirCodigo(raiz, valor);
+      inserirLivro(raiz, valor);
     }
   }
 
-  /*Insere ordenando pelo codigo*/
-  void inserirCodigo(NoArvore *raiz, Livro *valor) {
+  void inserirLivro(NoArvore *no, Livro *valor) {
 
     //esquerda 
-    if(valor->codigo < raiz->valor->codigo) {
-      if(raiz->filhoEsquerda == nullptr) { 
-          raiz->filhoEsquerda = new NoArvore(valor);
+    if(valor->codigo < no->valor->codigo) {
+      if(no->filhoEsquerda == nullptr) { 
+          no->filhoEsquerda = new NoArvore(valor);
       }
       else {
-		    inserirCodigo(raiz->filhoEsquerda, valor);
+		    inserirLivro(no->filhoEsquerda, valor);
       }
 		}
     //direita
-    if(valor->codigo > raiz->valor->codigo) {
-      if(raiz->filhoDireita == nullptr) { 
-          raiz->filhoDireita = new NoArvore(valor);
+    if(valor->codigo > no->valor->codigo) {
+      if(no->filhoDireita == nullptr) { 
+          no->filhoDireita = new NoArvore(valor);
       }
       else {
-		    inserirCodigo(raiz->filhoDireita, valor);
+		    inserirLivro(no->filhoDireita, valor);
       }
     }
-    //raiz->altura = maior(alturaNo(raiz->filhoEsquerda), alturaNo(raiz->filhoDireita)) + 1;
-    atualizaAltura(raiz);
-    raiz = balancearNo(raiz);
+    raiz->altura = maior(alturaNo(raiz->filhoEsquerda), alturaNo(raiz->filhoDireita)) + 1;
+    //atualizaAltura(no);
+    no = balancearNo(no);
     
   }
-/*************************************************************************/
 
-/*Funcao de balanceamento*/
-short calculaFatorBalanceado(NoArvore *no) {
-  if(no) {
-    return (alturaNo(no->filhoEsquerda) - alturaNo(no->filhoDireita));
-  }
-  else return 0;
-}
+//---- ALTURA ----
 
-NoArvore* balancearNo(NoArvore *raiz) {
-  short bal = calculaFatorBalanceado(raiz);
-
-  if(bal < -1 && calculaFatorBalanceado(raiz->filhoDireita) <=0) { raiz = rotacaoEsquerda(raiz); }
-
-  else if(bal < -1 && calculaFatorBalanceado(raiz->filhoDireita) > 0) { raiz = rotacaoDireitaEsquerda(raiz); }
-
-  else if(bal > 1 && calculaFatorBalanceado(raiz->filhoEsquerda) >=0) { raiz = rotacaoDireita(raiz); }
-
-  else if(bal > 1 && calculaFatorBalanceado(raiz->filhoEsquerda) < 0) { raiz = rotacaoEsquerdaDireita(raiz); }
-
-  return raiz;
-
-}
-
-/*Funcao de Altura*/
-
-  /*retona a altura do no*/
   short alturaNo(NoArvore *no) {
 
     if(no == nullptr) return 0;
@@ -173,6 +149,7 @@ NoArvore* balancearNo(NoArvore *raiz) {
     else return no->altura;
     
   }
+  //a testar
   void atualizaAltura(NoArvore *no) {
     short alturaEsquerda = alturaNo(no->filhoEsquerda);
     short alturaDireita = alturaNo(no->filhoDireita);
@@ -183,11 +160,9 @@ NoArvore* balancearNo(NoArvore *raiz) {
     return (a > b)? a : b; //'a' é maior do que 'b'? se sim retorne 'a', senão retorne 'b'
   } 
 
-  /**********************Funcoes de rotacoes (a implementar)**************************/
-  /*explicação sobre balanceamento: https://www.youtube.com/watch?v=oIp82CfCDoQ */
 
-  
-  
+//---- ROTAÇÃO ----
+
   NoArvore* rotacaoDireita(NoArvore *no) {//direita direita(DD)
     NoArvore *aux1, *aux2;
 
@@ -197,10 +172,10 @@ NoArvore* balancearNo(NoArvore *raiz) {
     aux1->filhoDireita = no;
     no->filhoEsquerda = aux2; 
 
-    //no->altura = maior(alturaNo(no->filhoEsquerda), alturaNo(no->filhoDireita)) + 1;
-    //aux1->altura = maior(alturaNo(aux1->filhoEsquerda), alturaNo(aux1->filhoDireita)) + 1;
-    atualizaAltura(no);
-    atualizaAltura(aux1);
+    no->altura = maior(alturaNo(no->filhoEsquerda), alturaNo(no->filhoDireita)) + 1;
+    aux1->altura = maior(alturaNo(aux1->filhoEsquerda), alturaNo(aux1->filhoDireita)) + 1;
+    //atualizaAltura(no);
+    //atualizaAltura(aux1);
   
     return aux1;
   }
@@ -213,11 +188,11 @@ NoArvore* balancearNo(NoArvore *raiz) {
     aux1->filhoEsquerda = no;
     no->filhoDireita = aux2;
 
-    //no->altura = maior(alturaNo(no->filhoEsquerda), alturaNo(no->filhoDireita)) + 1;
-    //aux1->altura = maior(alturaNo(aux1->filhoEsquerda), alturaNo(aux1->filhoDireita)) + 1;
-    atualizaAltura(no);
-    atualizaAltura(aux1);
-    std::cout<<aux1->altura << " " << aux1->valor->codigo;
+    no->altura = maior(alturaNo(no->filhoEsquerda), alturaNo(no->filhoDireita)) + 1;
+    aux1->altura = maior(alturaNo(aux1->filhoEsquerda), alturaNo(aux1->filhoDireita)) + 1;
+    //atualizaAltura(no);
+    //atualizaAltura(aux1);
+    //std::cout<<aux1->altura << " " << aux1->valor->codigo;
     return aux1;
   }
 
@@ -231,8 +206,35 @@ NoArvore* balancearNo(NoArvore *raiz) {
     no->filhoDireita = rotacaoDireita(no->filhoDireita);
     return rotacaoEsquerdaDireita(no);
   }
-    
-  /**************************************************************/
+
+
+//---- BALANCEAMENTO ----   
+//explicação sobre balanceamento: https://www.youtube.com/watch?v=oIp82CfCDoQ 
+
+
+  short calculaFatorBalanceado(NoArvore *no) {
+    if(no) {
+      return (alturaNo(no->filhoEsquerda) - alturaNo(no->filhoDireita));
+    }
+    else return 0;
+  }
+
+  NoArvore* balancearNo(NoArvore *no) {
+    short bal = calculaFatorBalanceado(no);
+
+    if(bal < -1 && calculaFatorBalanceado(no->filhoDireita) <=0) { no = rotacaoEsquerda(no); }
+
+    else if(bal < -1 && calculaFatorBalanceado(no->filhoDireita) > 0) { no = rotacaoDireitaEsquerda(no); }
+
+    else if(bal > 1 && calculaFatorBalanceado(no->filhoEsquerda) >=0) { no = rotacaoDireita(no); }
+
+    else if(bal > 1 && calculaFatorBalanceado(no->filhoEsquerda) < 0) { no = rotacaoEsquerdaDireita(no); }
+
+    return no;
+  }
+
+  
+
 
   void remover(Livro *valor) {
     // Para implementar
@@ -246,7 +248,7 @@ NoArvore* balancearNo(NoArvore *raiz) {
 };
 
 int main() {
-  Arvore arvore; //arvore do titulo 
+  Arvore arvore;
 
   arvore.adicionar(new Livro("O Senhor dos Anéis", "J. R. R. Tolkien", 1));
 
@@ -254,11 +256,11 @@ int main() {
 
   arvore.adicionar(new Livro("O Silmarillion", "J. R. R. Tolkien", 3));
 
-  //arvore.adicionar(new Livro("O escaravelho de ouro", "Edgar Allan Poe", 4));
-//
-  //arvore.adicionar(new Livro("O Guia do Mochileiro das Galáxias", "Douglas Adams", 5));
-//
-  //arvore.adicionar(new Livro("Metamorfose", "Franz Kafka", 6)); 
+  arvore.adicionar(new Livro("O escaravelho de ouro", "Edgar Allan Poe", 4));
+
+  arvore.adicionar(new Livro("O Guia do Mochileiro das Galáxias", "Douglas Adams", 5));
+
+  arvore.adicionar(new Livro("Metamorfose", "Franz Kafka", 6)); 
   arvore.imprimir();
 
   return 0;
