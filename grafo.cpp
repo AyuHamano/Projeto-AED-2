@@ -101,19 +101,6 @@ public:
 
   ~Arvore() { delete raiz; }
 
-  Arvore(tipoOrdenacao ordenacao) {
-    this->ordenacao;
-  }
-
-  int comparaOrd (NoArvore *a, Livro *b) {
-    if(ordenacao == tipoOrdenacao :: codigo) {
-      return a->valor->codigo - b->codigo;
-    }
-    else {
-      return a->valor->titulo.compare(b->titulo);
-    }
-  }
-
 
 /******************* funcao de adicionar um elemento nas arvores ******************************/
   void adicionar(Livro *valor) {
@@ -146,8 +133,8 @@ public:
 		    inserirCodigo(no->filhoDireita, valor);
       }
     }
-    no->altura = maiorAltura(alturaNo(no->filhoEsquerda), alturaNo(no->filhoDireita)) + 1;
-    no = balancearNo(no);
+    //no->altura = maiorAltura(alturaNo(no->filhoEsquerda), alturaNo(no->filhoDireita)) + 1;
+    //no = balancearNo(no);
   }
 /*************************************************************************/
 
