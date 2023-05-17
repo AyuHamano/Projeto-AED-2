@@ -59,7 +59,7 @@ public:
 
   NoArvore(Livro *valor) { 
     this->valor = valor;   
-    this->altura = 0; //a implementar
+    this->altura = 1; //a implementar
   }
 
   /**
@@ -133,7 +133,8 @@ public:
 		    inserirCodigo(raiz->filhoDireita, valor);
       }
     }
-    raiz->altura = maior(alturaNo(raiz->filhoEsquerda), alturaNo(raiz->filhoDireita)) + 1;
+    //raiz->altura = maior(alturaNo(raiz->filhoEsquerda), alturaNo(raiz->filhoDireita)) + 1;
+    atualizaAltura(raiz);
     raiz = balancearNo(raiz);
   }
 /*************************************************************************/
@@ -165,32 +166,21 @@ NoArvore* balancearNo(NoArvore *no) {
 
   /*retona a altura do no*/
   short alturaNo(NoArvore *no) {
-    if(no == NULL){
-        return -1;
-    }
-    else{
-        return no->altura;
-    }
+
+    if(no == NULL) return 0;
+    
+    else return no->altura;
+    
   }
+  void atualizaAltura(NoArvore *no) {
+    short alturaEsquerda = alturaNo(no->filhoEsquerda);
+    short alturaDireita = alturaNo(no->filhoDireita);
+    no->altura = maior(alturaEsquerda, alturaDireita) + 1;
+  }
+
   short maior(short a, short b) {
     return (a > b)? a : b; //'a' é maior do que 'b'? se sim retorne 'a', senão retorne 'b'
   } 
-
-
- /*
-  short calculaAlturaNo(NoArvore *no) {
-    if(no == NULL){
-        return -1;
-    }
-    else{
-        int esq = alturaNo(no->filhoEsquerda);
-        int dir = alturaNo(no->filhoDireita);
-
-        if(esq > dir) { return esq + 1; }
-        else {return dir + 1;}
-    }
-  }
-*/
 
   /**********************Funcoes de rotacoes (a implementar)**************************/
   /*explicação sobre balanceamento: https://www.youtube.com/watch?v=oIp82CfCDoQ */
@@ -206,8 +196,10 @@ NoArvore* balancearNo(NoArvore *no) {
     aux1->filhoDireita = no;
     no->filhoEsquerda = aux2; 
 
-    no->altura = maior(alturaNo(no->filhoEsquerda), alturaNo(no->filhoDireita)) + 1;
-    aux1->altura = maior(alturaNo(aux1->filhoEsquerda), alturaNo(aux1->filhoDireita)) + 1;
+    //no->altura = maior(alturaNo(no->filhoEsquerda), alturaNo(no->filhoDireita)) + 1;
+    //aux1->altura = maior(alturaNo(aux1->filhoEsquerda), alturaNo(aux1->filhoDireita)) + 1;
+    atualizaAltura(no);
+    atualizaAltura(aux1);
 
     return aux1;
   }
@@ -220,8 +212,10 @@ NoArvore* balancearNo(NoArvore *no) {
     aux1->filhoEsquerda = no;
     no->filhoDireita = aux2;
 
-    no->altura = maior(alturaNo(no->filhoEsquerda), alturaNo(no->filhoDireita)) + 1;
-    aux1->altura = maior(alturaNo(aux1->filhoEsquerda), alturaNo(aux1->filhoDireita)) + 1;
+    //no->altura = maior(alturaNo(no->filhoEsquerda), alturaNo(no->filhoDireita)) + 1;
+    //aux1->altura = maior(alturaNo(aux1->filhoEsquerda), alturaNo(aux1->filhoDireita)) + 1;
+    atualizaAltura(no);
+    atualizaAltura(aux1);
     return aux1;
   }
 
