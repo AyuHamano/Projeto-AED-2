@@ -104,7 +104,7 @@ public:
 
 /******************* funcao de adicionar um elemento nas arvores ******************************/
   void adicionar(Livro *valor) {
-    if(raiz==NULL) {
+    if(raiz==nullptr) {
       raiz = new NoArvore(valor);
     }
     else {
@@ -117,7 +117,7 @@ public:
 
     //esquerda 
     if(valor->codigo < raiz->valor->codigo) {
-      if(raiz->filhoEsquerda == NULL) { 
+      if(raiz->filhoEsquerda == nullptr) { 
           raiz->filhoEsquerda = new NoArvore(valor);
       }
       else {
@@ -126,7 +126,7 @@ public:
 		}
     //direita
     if(valor->codigo > raiz->valor->codigo) {
-      if(raiz->filhoDireita == NULL) { 
+      if(raiz->filhoDireita == nullptr) { 
           raiz->filhoDireita = new NoArvore(valor);
       }
       else {
@@ -136,6 +136,7 @@ public:
     //raiz->altura = maior(alturaNo(raiz->filhoEsquerda), alturaNo(raiz->filhoDireita)) + 1;
     atualizaAltura(raiz);
     raiz = balancearNo(raiz);
+    
   }
 /*************************************************************************/
 
@@ -167,7 +168,7 @@ NoArvore* balancearNo(NoArvore *no) {
   /*retona a altura do no*/
   short alturaNo(NoArvore *no) {
 
-    if(no == NULL) return 0;
+    if(no == nullptr) return 0;
     
     else return no->altura;
     
@@ -200,7 +201,7 @@ NoArvore* balancearNo(NoArvore *no) {
     //aux1->altura = maior(alturaNo(aux1->filhoEsquerda), alturaNo(aux1->filhoDireita)) + 1;
     atualizaAltura(no);
     atualizaAltura(aux1);
-
+  
     return aux1;
   }
   NoArvore* rotacaoEsquerda(NoArvore *no) { //esquerda esquerda(EE)
@@ -216,11 +217,13 @@ NoArvore* balancearNo(NoArvore *no) {
     //aux1->altura = maior(alturaNo(aux1->filhoEsquerda), alturaNo(aux1->filhoDireita)) + 1;
     atualizaAltura(no);
     atualizaAltura(aux1);
+    std::cout<<aux1->altura << " " << aux1->valor->codigo;
     return aux1;
   }
 
   NoArvore* rotacaoEsquerdaDireita(NoArvore* no) {//esquerda direita(ED)
     no->filhoEsquerda = rotacaoEsquerda(no->filhoEsquerda);
+    
     return rotacaoDireita(no);
   }
 
@@ -251,11 +254,11 @@ int main() {
 
   arvore.adicionar(new Livro("O Silmarillion", "J. R. R. Tolkien", 3));
 
-  arvore.adicionar(new Livro("O escaravelho de ouro", "Edgar Allan Poe", 4));
-
-  arvore.adicionar(new Livro("O Guia do Mochileiro das Galáxias", "Douglas Adams", 5));
-
-  arvore.adicionar(new Livro("Metamorfose", "Franz Kafka", 6)); 
+  //arvore.adicionar(new Livro("O escaravelho de ouro", "Edgar Allan Poe", 4));
+//
+  //arvore.adicionar(new Livro("O Guia do Mochileiro das Galáxias", "Douglas Adams", 5));
+//
+  //arvore.adicionar(new Livro("Metamorfose", "Franz Kafka", 6)); 
   arvore.imprimir();
 
   return 0;
