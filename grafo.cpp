@@ -144,7 +144,7 @@ public:
 
   short alturaNo(NoArvore *no) {
 
-    if(no == nullptr) return 0;
+    if(no == nullptr) return -1;
     
     else return no->altura;
     
