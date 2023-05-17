@@ -59,7 +59,7 @@ public:
 
   NoArvore(Livro *valor) { 
     this->valor = valor;   
-    this->altura = 1; //a implementar
+    this->altura = 0; //a implementar
   }
 
   /**
@@ -134,7 +134,7 @@ public:
 		    inserirLivro(no->filhoDireita, valor);
       }
     }
-    raiz->altura = maior(alturaNo(raiz->filhoEsquerda), alturaNo(raiz->filhoDireita)) + 1;
+    no->altura = maior(alturaNo(raiz->filhoEsquerda), alturaNo(raiz->filhoDireita)) + 1;
     //atualizaAltura(no);
     no = balancearNo(no);
     
