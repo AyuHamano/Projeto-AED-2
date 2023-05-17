@@ -148,7 +148,7 @@ short calculaFatorBalanceado(NoArvore *no) {
   else return 0;
 }
 
-NoArvore* balancearNo(NoArvore *no) {
+NoArvore* balancearNo(NoArvore *raiz) {
   short bal = calculaFatorBalanceado(raiz);
 
   if(bal < -1 && calculaFatorBalanceado(raiz->filhoDireita) <=0) { raiz = rotacaoEsquerda(raiz); }
