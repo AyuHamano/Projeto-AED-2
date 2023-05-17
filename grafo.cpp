@@ -113,28 +113,28 @@ public:
   }
 
   /*Insere ordenando pelo codigo*/
-  void inserirCodigo(NoArvore *no, Livro *valor) {
+  void inserirCodigo(NoArvore *raiz, Livro *valor) {
 
     //esquerda 
-    if(valor->codigo < no->valor->codigo) {
-      if(no->filhoEsquerda == NULL) { 
-          no->filhoEsquerda = new NoArvore(valor);
+    if(valor->codigo < raiz->valor->codigo) {
+      if(raiz->filhoEsquerda == NULL) { 
+          raiz->filhoEsquerda = new NoArvore(valor);
       }
       else {
-		    inserirCodigo(no->filhoEsquerda, valor);
+		    inserirCodigo(raiz->filhoEsquerda, valor);
       }
 		}
     //direita
-    if(valor->codigo > no->valor->codigo) {
-      if(no->filhoDireita == NULL) { 
-          no->filhoDireita = new NoArvore(valor);
+    if(valor->codigo > raiz->valor->codigo) {
+      if(raiz->filhoDireita == NULL) { 
+          raiz->filhoDireita = new NoArvore(valor);
       }
       else {
-		    inserirCodigo(no->filhoDireita, valor);
+		    inserirCodigo(raiz->filhoDireita, valor);
       }
     }
-    //no->altura = maiorAltura(alturaNo(no->filhoEsquerda), alturaNo(no->filhoDireita)) + 1;
-    //no = balancearNo(no);
+    raiz->altura = maior(alturaNo(raiz->filhoEsquerda), alturaNo(raiz->filhoDireita)) + 1;
+    raiz = balancearNo(raiz);
   }
 /*************************************************************************/
 
@@ -147,17 +147,17 @@ short calculaFatorBalanceado(NoArvore *no) {
 }
 
 NoArvore* balancearNo(NoArvore *no) {
-  short bal = calculaAlturaNo(no);
+  short bal = calculaFatorBalanceado(raiz);
 
-  if(bal < -1 && calculaFatorBalanceado(no->filhoDireita) <=0) { no = rotacaoEsquerda(no); }
+  if(bal < -1 && calculaFatorBalanceado(raiz->filhoDireita) <=0) { raiz = rotacaoEsquerda(raiz); }
 
-  else if(bal < -1 && calculaFatorBalanceado(no->filhoDireita) > 0) { no = rotacaoDireitaEsquerda(no); }
+  else if(bal < -1 && calculaFatorBalanceado(raiz->filhoDireita) > 0) { raiz = rotacaoDireitaEsquerda(raiz); }
 
-  else if(bal > 1 && calculaFatorBalanceado(no->filhoEsquerda) >=0) { no = rotacaoDireita(no); }
+  else if(bal > 1 && calculaFatorBalanceado(raiz->filhoEsquerda) >=0) { raiz = rotacaoDireita(raiz); }
 
-  else if(bal > 1 && calculaFatorBalanceado(no->filhoEsquerda) < 0) { no = rotacaoEsquerdaDireita(no); }
+  else if(bal > 1 && calculaFatorBalanceado(raiz->filhoEsquerda) < 0) { raiz = rotacaoEsquerdaDireita(raiz); }
 
-  return no;
+  return raiz;
 
 }
 
@@ -172,13 +172,12 @@ NoArvore* balancearNo(NoArvore *no) {
         return no->altura;
     }
   }
+  short maior(short a, short b) {
+    return (a > b)? a : b; //'a' é maior do que 'b'? se sim retorne 'a', senão retorne 'b'
+  } 
 
-  short maiorAltura(short altura1, short altura2) {
-    if(altura1 > altura2) { return altura1; }
 
-    else { return altura2; }
-  }
-
+ /*
   short calculaAlturaNo(NoArvore *no) {
     if(no == NULL){
         return -1;
@@ -191,15 +190,12 @@ NoArvore* balancearNo(NoArvore *no) {
         else {return dir + 1;}
     }
   }
-
+*/
 
   /**********************Funcoes de rotacoes (a implementar)**************************/
   /*explicação sobre balanceamento: https://www.youtube.com/watch?v=oIp82CfCDoQ */
 
-  short maior(short a, short b) {
-    return (a > b)? a : b; //a é maior do que b? se sim retorne a, senão retorne b
-  } 
-
+  
   
   NoArvore* rotacaoDireita(NoArvore *no) {//direita direita(DD)
     NoArvore *aux1, *aux2;
@@ -210,8 +206,8 @@ NoArvore* balancearNo(NoArvore *no) {
     aux1->filhoDireita = no;
     no->filhoEsquerda = aux2; 
 
-    no->altura = maiorAltura(alturaNo(no->filhoEsquerda), alturaNo(no->filhoDireita)) + 1;
-    aux1->altura = maiorAltura(alturaNo(aux1->filhoEsquerda), alturaNo(aux1->filhoDireita)) + 1;
+    no->altura = maior(alturaNo(no->filhoEsquerda), alturaNo(no->filhoDireita)) + 1;
+    aux1->altura = maior(alturaNo(aux1->filhoEsquerda), alturaNo(aux1->filhoDireita)) + 1;
 
     return aux1;
   }
@@ -224,8 +220,8 @@ NoArvore* balancearNo(NoArvore *no) {
     aux1->filhoEsquerda = no;
     no->filhoDireita = aux2;
 
-    no->altura = maiorAltura(alturaNo(no->filhoEsquerda), alturaNo(no->filhoDireita)) + 1;
-    aux1->altura = maiorAltura(alturaNo(aux1->filhoEsquerda), alturaNo(aux1->filhoDireita)) + 1;
+    no->altura = maior(alturaNo(no->filhoEsquerda), alturaNo(no->filhoDireita)) + 1;
+    aux1->altura = maior(alturaNo(aux1->filhoEsquerda), alturaNo(aux1->filhoDireita)) + 1;
     return aux1;
   }
 
