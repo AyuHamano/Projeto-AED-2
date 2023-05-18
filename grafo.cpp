@@ -49,10 +49,10 @@ public:
   Livro *valor;
 
   /** Ponteiro para o filho esquerdo */
-  NoArvore *filhoEsquerda = nullptr;
+  NoArvore *filhoEsquerda;
 
   /** Ponteiro para o filho direito */
-  NoArvore *filhoDireita = nullptr;
+  NoArvore *filhoDireita;
 
   /** Altura do no */
   short altura;
@@ -60,6 +60,8 @@ public:
   NoArvore(Livro *valor) { 
     this->valor = valor;   
     this->altura = 0; //a implementar
+	  this->filhoEsquerda=nullptr;
+	  this->filhoDireita=nullptr;
   }
 
   /**
