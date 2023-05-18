@@ -235,8 +235,51 @@ public:
     return no;
   }
 
-  
-
+  Livro *buscaPorTitulo(string titulo) {
+    return buscaPorTitulo(titulo, raiz);
+  }
+ 
+  Livro *buscaPorTitulo(string titulo, NoArvore *no) {
+    if (no == nullptr) {
+      return nullptr;
+    }
+ 
+    int compararTitulos = no->valor->titulo.compare(titulo);
+ 
+    if (compararTitulos == 0) {
+      return no->valor;
+    }
+ 
+    Livro *livroEsq = buscaPorTitulo(titulo, no->filhoEsquerda);
+    if (livroEsq != nullptr) {
+      return livroEsq;
+    }
+ 
+    Livro *livroDir = buscaPorTitulo(titulo, no->filhoDireita);
+    if (livroDir != nullptr) {
+      return livroDir;
+    }
+ 
+    return nullptr;
+  }
+ 
+  Livro *buscaPorCodigo(int codigo) {
+    return buscaPorCodigo(codigo, raiz);
+  }
+ 
+  Livro *buscaPorCodigo(int codigo, NoArvore *no) {
+    if (no == nullptr) {
+      return nullptr;
+    }
+ 
+    if (codigo == no->valor->codigo) {
+      return no->valor;
+    } else if (codigo < no->valor->codigo) {
+      return buscaPorCodigo(codigo, no->filhoEsquerda);
+    } else {
+      return buscaPorCodigo(codigo, no->filhoDireita);
+    }
+  }
 
   void remover(Livro *valor) {
     // Para implementar
