@@ -49,10 +49,10 @@ public:
   Livro *valor;
 
   /** Ponteiro para o filho esquerdo */
-  NoArvore *filhoEsquerda;
+  NoArvore *filhoEsquerda; //=nullptr;
 
   /** Ponteiro para o filho direito */
-  NoArvore *filhoDireita;
+  NoArvore *filhoDireita; //=nullptr;
 
   /** Altura do no */
   short altura;
