@@ -138,7 +138,7 @@ public:
     }
     no->altura = maior(alturaNo(raiz->filhoEsquerda), alturaNo(raiz->filhoDireita)) + 1;
     //atualizaAltura(no);
-    no = balancearNo(no);
+    //no = balancearNo(no);
     
   }
 
