@@ -112,11 +112,11 @@ public:
       raiz = new NoArvore(valor);
     }
     else {
-      inserirLivro(raiz, valor);
+      raiz = inserirLivro(raiz, valor);
     }
   }
 
-  void inserirLivro(NoArvore *no, Livro *valor) {
+  NoArvore *inserirLivro(NoArvore *no, Livro *valor) {
 
     //esquerda 
     if(valor->codigo < no->valor->codigo) {
@@ -124,7 +124,7 @@ public:
           no->filhoEsquerda = new NoArvore(valor);
       }
       else {
-		    inserirLivro(no->filhoEsquerda, valor);
+        no->filhoEsquerda = inserirLivro(no->filhoEsquerda, valor);
       }
 		}
     //direita
@@ -133,12 +133,12 @@ public:
           no->filhoDireita = new NoArvore(valor);
       }
       else {
-		    inserirLivro(no->filhoDireita, valor);
+        no->filhoDireita = inserirLivro(no->filhoDireita, valor);
       }
     }
     no->altura = maior(alturaNo(raiz->filhoEsquerda), alturaNo(raiz->filhoDireita)) + 1;
     //atualizaAltura(no);
-    //no = balancearNo(no);
+    return balancearNo(no);
     
   }
 
@@ -206,7 +206,7 @@ public:
 
   NoArvore* rotacaoDireitaEsquerda(NoArvore* no) {//diereita esquerda(DE)
     no->filhoDireita = rotacaoDireita(no->filhoDireita);
-    return rotacaoEsquerdaDireita(no);
+    return rotacaoEsquerda(no);
   }
 
 
