@@ -283,7 +283,7 @@ public:
 
   NoArvore *remover(NoArvore *raiz, string titulo) {
     // verifica se o acervo esta vazio
-    if (valor->título!=nullptr){
+    if (raiz!=nullptr){
       //Remove nos sem filhos
       if (raiz->filhoEsquerda==nullptr && raiz->filhoDireita==nullptr){
         free(raiz);
@@ -297,7 +297,7 @@ public:
           aux=aux->filhoDireita;
         } 
         raiz->valor=aux->valor;
-        raiz->filhoEsquerda = remove(raiz->filhoEsquerda, titulo);
+        raiz->filhoEsquerda = remover(raiz->filhoEsquerda, titulo);
         return raiz;
       }
       else{
@@ -313,6 +313,9 @@ public:
       }
       balancearNo(raiz);
       return raiz;
+    }
+    else {
+       std::cout << "Livro nao encontrado no acervo" << "\n";
     }
   }
 
@@ -369,8 +372,8 @@ int main() {
       case 3:
         std::cout << "Titulo do Livro que deseja remover:" << "\n";
         std::cin >> titulo;
-        buscaPorTitulo(titulo);
-        remover(arvore->raiz, titulo);
+        //buscaPorTitulo(titulo);
+        remover (arvore.raiz, titulo);
 
        break;
 
