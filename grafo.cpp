@@ -292,6 +292,7 @@ public:
   }
 };
 
+// Menu com as funções realizadas pelo sistema
 void menu(){
   std::cout << "***MENU DA BIBLIOTECA***" << "\n";
   std::cout << "1 - Inserir livro no acervo" << "\n";
@@ -339,6 +340,7 @@ int main() {
 
       //Saída do menu
       case 4:
+         std::cout << "Obrigada por utilizar o nosso sistema de biblioteca" << "\n";
 
        break;
 
