@@ -302,6 +302,7 @@ void menu(){
 
 int main() {
   Arvore arvore;
+  int op;
 
   arvore.adicionar(new Livro("O Senhor dos Anéis", "J. R. R. Tolkien", 1));
 
@@ -315,6 +316,38 @@ int main() {
 
   arvore.adicionar(new Livro("Metamorfose", "Franz Kafka", 6)); 
   arvore.imprimir();
+
+  do{
+    menu();
+    std::cin >> op;
+    switch(op){
+
+      //Função de inserção
+      case 1:
+
+       break;
+      
+      //Função de busca
+      case 2:
+
+       break;
+
+      //Função de remoção
+      case 3:
+
+       break;
+
+      //Saída do menu
+      case 4:
+
+       break;
+
+      default:
+        std::cout << "Entre com uma opção válida" << "\n";
+
+       break;
+    }
+  }while(op!=4);
 
   return 0;
 }
