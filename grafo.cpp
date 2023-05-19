@@ -292,6 +292,14 @@ public:
   }
 };
 
+void menu(){
+  std::cout << "***MENU DA BIBLIOTECA***" << "\n";
+  std::cout << "1 - Inserir livro no acervo" << "\n";
+  std::cout << "2 - Buscar livro no acervo" << "\n";
+  std::cout << "3 - Remover livro do acervo" << "\n";
+  std::cout << "4 - Sair" << "\n";
+}
+
 int main() {
   Arvore arvore;
 
