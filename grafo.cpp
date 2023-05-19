@@ -281,8 +281,39 @@ public:
     }
   }
 
-  void remover(Livro *valor) {
-    // Para implementar
+  NoArvore *remover(NoArvore *raiz, string titulo) {
+    // verifica se o acervo esta vazio
+    if (valor->título!=nullptr){
+      //Remove nos sem filhos
+      if (raiz->filhoEsquerda==nullptr && raiz->filhoDireita==nullptr){
+        free(raiz);
+        return nullptr;
+      }
+      //Remove no com 2 filhos
+      else if(raiz->filhoEsquerda != nullptr && raiz->filhoDireita != nullptr){
+        NoArvore *aux;
+        aux = raiz->filhoEsquerda;
+        while(aux->filhoDireita!=nullptr){
+          aux=aux->filhoDireita;
+        } 
+        raiz->valor=aux->valor;
+        raiz->filhoEsquerda = remove(raiz->filhoEsquerda, titulo);
+        return raiz;
+      }
+      else{
+        NoArvore *aux=nullptr;
+        if (raiz->filhoEsquerda!=nullptr){
+          aux=raiz->filhoEsquerda;
+        }
+        else {
+          aux=raiz->filhoDireita;
+        }
+        free(raiz);
+        return aux;
+      }
+      balancearNo(raiz);
+      return raiz;
+    }
   }
 
   void imprimir() {
@@ -304,6 +335,7 @@ void menu(){
 int main() {
   Arvore arvore;
   int op;
+  string titulo;
 
   arvore.adicionar(new Livro("O Senhor dos Anéis", "J. R. R. Tolkien", 1));
 
@@ -329,12 +361,16 @@ int main() {
        break;
       
       //Função de busca
-      case 2:
-
+      case 2: 
+        
        break;
 
       //Função de remoção
       case 3:
+        std::cout << "Titulo do Livro que deseja remover:" << "\n";
+        std::cin >> titulo;
+        buscaPorTitulo(titulo);
+        remover(arvore->raiz, titulo);
 
        break;
 
