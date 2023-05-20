@@ -59,7 +59,7 @@ public:
 
   NoArvore(Livro *valor) { 
     this->valor = valor;   
-    this->altura = 0; //a implementar
+    this->altura = 0; 
 	  this->filhoEsquerda=nullptr;
 	  this->filhoDireita=nullptr;
   }
@@ -98,13 +98,12 @@ public:
 
 class Arvore {
 public:
+
   NoArvore *raiz = nullptr;
-
-
   ~Arvore() { delete raiz; }
 
 
-
+//---- FUNÇÕES DA ÁRVORE - INSERIR, BALANCEAR, BUSCAR E REMOVER
 //---- ADIÇÃO DE UM LIVRO
 
   void adicionar(Livro *valor) {
@@ -136,8 +135,7 @@ public:
         no->filhoDireita = inserirLivro(no->filhoDireita, valor);
       }
     }
-    no->altura = maior(alturaNo(raiz->filhoEsquerda), alturaNo(raiz->filhoDireita)) + 1;
-    //atualizaAltura(no);
+    atualizaAltura(no);
     return balancearNo(no);
     
   }
@@ -174,10 +172,8 @@ public:
     aux1->filhoDireita = no;
     no->filhoEsquerda = aux2; 
 
-    no->altura = maior(alturaNo(no->filhoEsquerda), alturaNo(no->filhoDireita)) + 1;
-    aux1->altura = maior(alturaNo(aux1->filhoEsquerda), alturaNo(aux1->filhoDireita)) + 1;
-    //atualizaAltura(no);
-    //atualizaAltura(aux1);
+    atualizaAltura(no);
+    atualizaAltura(aux1);
   
     return aux1;
   }
@@ -190,11 +186,8 @@ public:
     aux1->filhoEsquerda = no;
     no->filhoDireita = aux2;
 
-    no->altura = maior(alturaNo(no->filhoEsquerda), alturaNo(no->filhoDireita)) + 1;
-    aux1->altura = maior(alturaNo(aux1->filhoEsquerda), alturaNo(aux1->filhoDireita)) + 1;
-    //atualizaAltura(no);
-    //atualizaAltura(aux1);
-    //std::cout<<aux1->altura << " " << aux1->valor->codigo;
+    atualizaAltura(no);
+    atualizaAltura(aux1);
     return aux1;
   }
 
