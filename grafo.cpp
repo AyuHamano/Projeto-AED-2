@@ -337,8 +337,8 @@ void menu(){
 
 int main() {
   Arvore arvore;
-  int op;
-  string titulo;
+  short codigo, op;
+  string titulo, autor;
 
   arvore.adicionar(new Livro("O Senhor dos Anéis", "J. R. R. Tolkien", 1));
 
@@ -353,6 +353,10 @@ int main() {
   arvore.adicionar(new Livro("Metamorfose", "Franz Kafka", 6)); 
   arvore.imprimir();
 
+  //teste da função remover
+  arvore.remover(arvore.raiz, "Metamorfose");
+  arvore.imprimir(); 
+
   do{
     menu();
     std::cin >> op;
@@ -360,25 +364,37 @@ int main() {
 
       //Função de inserção
       case 1:
+        std::cout << "Digite o Titulo do Livro que deseja inserir:" << "\n";
+        std::cin >> titulo;
+        std::cout << "Digite o autor do Livro que deseja inserir:" << "\n";
+        std::cin >> autor;
+        std::cout << "Digite o código do Livro que deseja inserir:" << "\n";
+        std::cin >> codigo;
+        arvore.adicionar(new Livro(titulo, autor, codigo));
 
        break;
       
-      //Função de busca
+      //Função de busca por código
       case 2: 
         
        break;
 
+       //Função de busca por título
+      case 3: 
+        
+       break;
+
       //Função de remoção
-      case 3:
+      case 4:
         std::cout << "Titulo do Livro que deseja remover:" << "\n";
         std::cin >> titulo;
         //buscaPorTitulo(titulo);
-        remover (arvore.raiz, titulo);
+        arvore.remover(arvore.raiz, titulo);
 
        break;
 
       //Saída do menu
-      case 4:
+      case 5:
          std::cout << "Obrigada por utilizar o nosso sistema de biblioteca" << "\n";
 
        break;
@@ -388,7 +404,7 @@ int main() {
 
        break;
     }
-  }while(op!=4);
+  } while(op!=5);
 
   return 0;
 }
