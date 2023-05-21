@@ -2,6 +2,8 @@
 #include <string>
 #include <cstring>
 using std::string;
+using namespace std;
+
 
 /**
  * Classe que representa um livro. Cada livro possui um título, um autor e
@@ -31,10 +33,10 @@ public:
    *
    * Ou, de forma implícita:
    *
-   * std::cout << livro << std::endl;
+   *  cout << livro <<  endl;
    */
   operator string() const {
-    return titulo + " - " + autor + " (" + std::to_string(codigo) + ")";
+    return titulo + " - " + autor + " (" +  to_string(codigo) + ")";
   }
 };
 
@@ -87,7 +89,7 @@ public:
       filhoDireita->imprimir(indent + 4);
     }
 
-    std::cout << string(indent, ' ') << string(*valor) << std::endl;
+     cout << string(indent, ' ') << string(*valor) <<  endl;
 
     if (filhoEsquerda) {
       filhoEsquerda->imprimir(indent + 4);
@@ -109,11 +111,9 @@ public:
   void adicionar(Livro *valor) {
     if(raiz==nullptr) {
       raiz = new NoArvore(valor);
-      std::cout<<"Livro adicionado com sucesso!"<<"/n";
+       cout<<"Livro adicionado com sucesso!"<<"/n";
     }
-    else {
-      raiz = inserirLivro(raiz, valor);
-    }
+    else raiz = inserirLivro(raiz, valor);
   }
 
   NoArvore *inserirLivro(NoArvore *no, Livro *valor) {
@@ -122,7 +122,7 @@ public:
     if(valor->codigo < no->valor->codigo) {
       if(no->filhoEsquerda == nullptr) { 
           no->filhoEsquerda = new NoArvore(valor);
-          std::cout<<"Livro adicionado com sucesso!"<<"\n";
+           cout<<"Livro adicionado com sucesso!"<<"\n";
       }
       else {
         no->filhoEsquerda = inserirLivro(no->filhoEsquerda, valor);
@@ -132,7 +132,7 @@ public:
     if(valor->codigo > no->valor->codigo) {
       if(no->filhoDireita == nullptr) { 
           no->filhoDireita = new NoArvore(valor);
-          std::cout<<"Livro adicionado com sucesso!"<<"\n";
+           cout<<"Livro adicionado com sucesso!"<<"\n";
       }
       else {
         no->filhoDireita = inserirLivro(no->filhoDireita, valor);
@@ -140,7 +140,7 @@ public:
     }
     //se não for nenhum, então já existe
     else {
-      std::cout << "Código digitado já existe, tente novamente com outros dados" <<"\n";
+       cout << "Código digitado já existe, tente novamente com outros dados" <<"\n";
     }
 
     atualizaAltura(no);
@@ -316,7 +316,7 @@ public:
       return raiz;
     }
     else {
-       std::cout << "Livro nao encontrado no acervo" << "\n";
+        cout << "Livro nao encontrado no acervo" << "\n";
     }
   }
 
@@ -329,17 +329,17 @@ public:
 
 // Menu com as funções realizadas pelo sistema
 void menu(){
-  std::cout << "***MENU DA BIBLIOTECA***" << "\n";
-  std::cout << "1 - Inserir livro no acervo" << "\n";
-  std::cout << "2 - Buscar livro por códiogo no acervo" << "\n";
-  std::cout << "3 - Buscar livro por título no acervo" << "\n";
-  std::cout << "4 - Remover livro do acervo" << "\n";
-  std::cout << "5 - Sair" << "\n";
+   cout << "***MENU DA BIBLIOTECA***" << "\n";
+   cout << "1 - Inserir livro no acervo" << "\n";
+   cout << "2 - Buscar livro por códiogo no acervo" << "\n";
+   cout << "3 - Buscar livro por título no acervo" << "\n";
+   cout << "4 - Remover livro do acervo" << "\n";
+   cout << "5 - Sair" << "\n";
 }
 
 int main() {
   Arvore arvore;
-  short codigo, op;
+  int codigo, op;
   string titulo, autor;
 
   arvore.adicionar(new Livro("O Senhor dos Anéis", "J. R. R. Tolkien", 1));
@@ -357,17 +357,17 @@ int main() {
 
   do{
     menu();
-    std::cin >> op;
+     cin >> op;
     switch(op){
 
       //Função de inserção
       case 1:
-        std::cout << "Digite o Titulo do Livro que deseja inserir:" << "\n";
-        std::cin >> titulo;
-        std::cout << "Digite o autor do Livro que deseja inserir:" << "\n";
-        std::cin >> autor;
-        std::cout << "Digite o código do Livro que deseja inserir:" << "\n";
-        std::cin >> codigo;
+         cout << "Digite o Titulo do Livro que deseja inserir:" << "\n";
+         cin >> titulo;
+         cout << "Digite o autor do Livro que deseja inserir:" << "\n";
+         cin >> autor;
+         cout << "Digite o código do Livro que deseja inserir:" << "\n";
+         cin >> codigo;
         arvore.adicionar(new Livro(titulo, autor, codigo));
 
        break;
@@ -384,8 +384,8 @@ int main() {
 
       //Função de remoção
       case 4:
-        std::cout << "Titulo do Livro que deseja remover:" << "\n";
-        std::cin >> titulo;
+         cout << "Titulo do Livro que deseja remover:" << "\n";
+         cin >> titulo;
         //buscaPorTitulo(titulo);
         arvore.remover(arvore.raiz, titulo);
 
@@ -393,12 +393,12 @@ int main() {
 
       //Saída do menu
       case 5:
-         std::cout << "Obrigada por utilizar o nosso sistema de biblioteca" << "\n";
+          cout << "Obrigada por utilizar o nosso sistema de biblioteca" << "\n";
 
        break;
 
       default:
-        std::cout << "Entre com uma opção válida" << "\n";
+         cout << "Entre com uma opção válida" << "\n";
 
        break;
     }
