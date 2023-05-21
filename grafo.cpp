@@ -285,42 +285,51 @@ public:
     }
   }
 
-  NoArvore *remover(NoArvore *raiz, string titulo) {
-    // verifica se o acervo esta vazio
-    if (raiz!=nullptr){
-      //Remove nos sem filhos
-      if (raiz->filhoEsquerda==nullptr && raiz->filhoDireita==nullptr){
-        free(raiz);
-        return nullptr;
-      }
-      //Remove no com 2 filhos
-      else if(raiz->filhoEsquerda != nullptr && raiz->filhoDireita != nullptr){
-        NoArvore *aux;
-        aux = raiz->filhoEsquerda;
-        while(aux->filhoDireita!=nullptr){
-          aux=aux->filhoDireita;
-        } 
-        raiz->valor=aux->valor;
-        raiz->filhoEsquerda = remover(raiz->filhoEsquerda, titulo);
-        return raiz;
-      }
-      else{
-        NoArvore *aux=nullptr;
-        if (raiz->filhoEsquerda!=nullptr){
-          aux=raiz->filhoEsquerda;
-        }
-        else {
-          aux=raiz->filhoDireita;
-        }
-        free(raiz);
-        return aux;
-      }
-      balancearNo(raiz);
-      return raiz;
-    }
-    else {
+  NoArvore *remover(NoArvore *raiz, int codigo) {
+    if(raiz==nullptr) {
         cout << "Livro nao encontrado no acervo" << "\n";
     }
+      // verifica se o acervo esta vazio
+    else {
+      if(codigo == raiz->valor->codigo) { 
+        //Remove nos sem filhos
+        if (raiz->filhoEsquerda==nullptr && raiz->filhoDireita==nullptr){
+          free(raiz);
+          return nullptr;
+        }
+        //Remove no com 2 filhos
+        else if(raiz->filhoEsquerda != nullptr && raiz->filhoDireita != nullptr){
+          NoArvore *aux;
+          aux = raiz->filhoEsquerda;
+          while(aux->filhoDireita!=nullptr){
+            aux=aux->filhoDireita;
+          } 
+          raiz->valor=aux->valor;
+          raiz->filhoEsquerda = remover(raiz->filhoEsquerda, codigo);
+          return raiz;
+        }
+        else{
+          NoArvore *aux=nullptr;
+          if (raiz->filhoEsquerda!=nullptr){
+            aux=raiz->filhoEsquerda;
+          }
+          else {
+            aux=raiz->filhoDireita;
+          }
+          free(raiz);
+          return aux;
+        }
+      }
+      else {
+        if(codigo < raiz->valor->codigo) { //esquerda
+          raiz->filhoEsquerda = remover(raiz->filhoEsquerda, codigo);
+        }
+        else raiz->filhoDireita = remover(raiz->filhoDireita, codigo); //direita
+      }
+      
+    }
+    balancearNo(raiz);
+      return raiz;
   }
 
   void imprimir() {
@@ -377,9 +386,10 @@ int main() {
       
       //Função de busca por código
       case 2: 
-         cout << "Digite o código do Livro que deseja buscar:" << "\n";
-         cin >> codigo;
-        arvore.buscaPorCodigo(codigo);
+      arvore.imprimir();
+      //   cout << "Digite o código do Livro que deseja buscar:" << "\n";
+      //   cin >> codigo;
+      //  arvore.buscaPorCodigo(codigo);
         
        break;
 
@@ -394,9 +404,8 @@ int main() {
       //Função de remoção
       case 4:
          cout << "Titulo do Livro que deseja remover:" << "\n";
-         cin >> titulo;
-        //buscaPorTitulo(titulo);
-        arvore.remover(arvore.raiz, titulo);
+         cin >> codigo;
+         arvore.remover(arvore.raiz, codigo);
 
        break;
 
