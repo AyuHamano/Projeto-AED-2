@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <cstring>
+
 using std::string;
 using namespace std;
 
@@ -242,6 +243,7 @@ public:
  
   Livro *buscaPorTitulo(string titulo, NoArvore *no) {
     if (no == nullptr) {
+       cout << "Não possuimos um livro com esse título no acervo" << "\n";
       return nullptr;
     }
  
@@ -270,6 +272,7 @@ public:
  
   Livro *buscaPorCodigo(int codigo, NoArvore *no) {
     if (no == nullptr) {
+       cout << "Não possuimos um livro com esse código no acervo" << "\n";
       return nullptr;
     }
  
@@ -374,11 +377,17 @@ int main() {
       
       //Função de busca por código
       case 2: 
+         cout << "Digite o código do Livro que deseja buscar:" << "\n";
+         cin >> codigo;
+        arvore.buscaPorCodigo(codigo);
         
        break;
 
        //Função de busca por título
       case 3: 
+        cout << "Digite o título do Livro que deseja buscar:" << "\n";
+        cin >> titulo;
+       arvore.buscaPorTitulo(titulo);
         
        break;
 
