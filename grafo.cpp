@@ -109,6 +109,7 @@ public:
   void adicionar(Livro *valor) {
     if(raiz==nullptr) {
       raiz = new NoArvore(valor);
+      std::cout<<"Livro adicionado com sucesso!"<<"/n";
     }
     else {
       raiz = inserirLivro(raiz, valor);
@@ -121,6 +122,7 @@ public:
     if(valor->codigo < no->valor->codigo) {
       if(no->filhoEsquerda == nullptr) { 
           no->filhoEsquerda = new NoArvore(valor);
+          std::cout<<"Livro adicionado com sucesso!"<<"\n";
       }
       else {
         no->filhoEsquerda = inserirLivro(no->filhoEsquerda, valor);
@@ -130,11 +132,17 @@ public:
     if(valor->codigo > no->valor->codigo) {
       if(no->filhoDireita == nullptr) { 
           no->filhoDireita = new NoArvore(valor);
+          std::cout<<"Livro adicionado com sucesso!"<<"\n";
       }
       else {
         no->filhoDireita = inserirLivro(no->filhoDireita, valor);
       }
     }
+    //se não for nenhum, então já existe
+    else {
+      std::cout << "Código digitado já existe, tente novamente com outros dados" <<"\n";
+    }
+
     atualizaAltura(no);
     return balancearNo(no);
     
@@ -323,9 +331,10 @@ public:
 void menu(){
   std::cout << "***MENU DA BIBLIOTECA***" << "\n";
   std::cout << "1 - Inserir livro no acervo" << "\n";
-  std::cout << "2 - Buscar livro no acervo" << "\n";
-  std::cout << "3 - Remover livro do acervo" << "\n";
-  std::cout << "4 - Sair" << "\n";
+  std::cout << "2 - Buscar livro por códiogo no acervo" << "\n";
+  std::cout << "3 - Buscar livro por título no acervo" << "\n";
+  std::cout << "4 - Remover livro do acervo" << "\n";
+  std::cout << "5 - Sair" << "\n";
 }
 
 int main() {
@@ -344,10 +353,6 @@ int main() {
   arvore.adicionar(new Livro("O Guia do Mochileiro das Galáxias", "Douglas Adams", 5));
 
   arvore.adicionar(new Livro("Metamorfose", "Franz Kafka", 6)); 
-  arvore.imprimir();
-
-  //teste da função remover
-  arvore.remover(arvore.raiz, "Metamorfose");
   arvore.imprimir(); 
 
   do{
