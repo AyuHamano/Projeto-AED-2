@@ -379,7 +379,7 @@ int main() {
   if (teste == NULL)
 {
     printf("Problemas na leitura do arquivo\n");
-    return;
+    return; // Está dando erro e impedindo o programa de compilar
 }
   do{
     menu();
