@@ -27,7 +27,7 @@
 1 27 Anjos e Arcanjos
 1 28 Aprendendo com a Vida
 1 29 Aromas da Paixão
-1 30 As Cores do Arco-Íris
+1 30 As Cores do ArcoÍris
 1 31 As Estrelas Cintilantes
 1 32 As Flores do Jardim
 1 33 As Grandes Descobertas
@@ -114,14 +114,14 @@
 1 114 Beleza Intensa
 1 115 Brumas da Memória
 1 116 Baús de Histórias
-1 117 Beija-Flor Encantado
+1 117 BeijaFlor Encantado
 1 118 Batalha Interior
 1 119 Brilho da Esperança
 1 120 Brisa do Entardecer
 1 121 Belezas Ocultas
 1 122 Brilho no Abismo
 1 123 Buscando o Paraíso
-1 124 Bem-Vindos ao Inferno
+1 124 BemVindos ao Inferno
 1 125 Brisa da Manhã
 1 126 Brumas do Passado
 1 127 Beijos Ardentes
@@ -134,14 +134,14 @@
 1 134 Brilho da Vida
 1 135 Batalha dos Corações
 1 136 Brisa da Liberdade
-1 137 Beija-Flor em Flor
+1 137 BeijaFlor em Flor
 1 138 Brumas do Amor
 1 139 Baús de Lembranças
-1 140 Beijos da Meia-Noite
+1 140 Beijos da MeiaNoite
 1 141 Bruxas Modernas
 1 142 Brilho no Céu
 1 143 Buscando a Verdade
-1 144 Bem-Vindos à Loucura
+1 144 BemVindos à Loucura
 1 145 Brisa do Verão
 1 146 Brumas do Silêncio
 1 147 Beijos Prodigiosos
@@ -157,7 +157,7 @@
 1 157 Bruxas do Destino
 1 158 Brilho Noturno
 1 159 Buscando a Redenção
-1 160 Bem-Vindos ao Caos
+1 160 BemVindos ao Caos
 1 161 Brisa da Primavera
 1 162 Brumas do Desejo
 1 163 Beijos Ressurgidos
@@ -1034,7 +1034,7 @@
 3 Anjos e Arcanjos
 3 Aprendendo com a Vida
 3 Aromas da Paixão
-3 As Cores do Arco-Íris
+3 As Cores do ArcoÍris
 3 As Estrelas Cintilantes
 3 As Flores do Jardim
 3 As Grandes Descobertas
@@ -1121,14 +1121,14 @@
 3 Beleza Intensa
 3 Brumas da Memória
 3 Baús de Histórias
-3 Beija-Flor Encantado
+3 BeijaFlor Encantado
 3 Batalha Interior
 3 Brilho da Esperança
 3 Brisa do Entardecer
 3 Belezas Ocultas
 3 Brilho no Abismo
 3 Buscando o Paraíso
-3 Bem-Vindos ao Infern
+3 BemVindos ao Infern
 3 Brisa da Manhã
 3 Brumas do Passado
 3 Beijos Ardentes
@@ -1141,14 +1141,14 @@
 3 Brilho da Vida
 3 Batalha dos Corações
 3 Brisa da Liberdade
-3 Beija-Flor em Flor
+3 BeijaFlor em Flor
 3 Brumas do Amor
 3 Baús de Lembranças
-3 Beijos da Meia-Noite
+3 Beijos da MeiaNoite
 3 Bruxas Modernas
 3 Brilho no Céu
 3 Buscando a Verdade
-3 Bem-Vindos à Loucura
+3 BemVindos à Loucura
 3 Brisa do Verão
 3 Brumas do Silêncio
 3 Beijos Prodigiosos
@@ -1164,7 +1164,7 @@
 3 Bruxas do Destino
 3 Brilho Noturno
 3 Buscando a Redenção
-3 Bem-Vindos ao Caos
+3 BemVindos ao Caos
 3 Brisa da Primavera
 3 Brumas do Desejo
 3 Beijos Ressurgidos
@@ -2012,3 +2012,261 @@
 3 Mistérios da Vida
 3 Magia Despertada
 3 Mentes Brilhantes  
+1	
+1008	
+Dom Quixote  
+Miguel de Cervantes
+1	
+1009	
+Orgulho e Preconceito  
+Jane Austen
+1	
+
+1010	
+1984  
+George Orwell
+1	
+
+1011	
+O Grande Gatsby  
+F.tt Fitzgerald
+1	
+
+1012	
+Crime e Castigo  
+FyoDostoevsky
+1	
+
+1013	
+Moby Dick  
+Herman Melville
+1	
+
+1014	
+Cem Anos de Solidão  
+Gabriel García Márquez
+1	
+
+1015	
+Ulisses  
+James Joyce
+1	
+
+1016	
+A Divina Comédia  
+Dante Alighieri
+1	
+
+1017	
+O Apanhador no Campo de Centeio  
+J.D. Salinger
+1	
+
+1018	
+Guerra e Paz  
+Leo Tolstoy
+1	
+
+1019	
+Em Busca do Tempo Perdido  
+Marcel Proust
+1	
+
+1020	
+A Odisséia  
+Homero
+1	
+
+1021	
+A Metamorfose  
+Franz Kafka
+1	
+
+1022	
+O Sol é para Todos  
+Harper Lee
+1	
+
+1023	
+O Senhor dos Anéis 
+ J.R.R. Tolkien
+1	
+
+1024	
+As Aventuras de Huckleberry Finn  
+Mark Twain
+1	
+
+1025	
+O Processo  
+Franz Kafka
+1	
+
+1026	
+O Som e a Fúria  
+William Faulkner
+1	
+
+1027	
+O Retrato de Dorian Gray  
+Oscar Wilde
+1	
+
+1028	
+O Pequeno Príncipe  
+Antoine de SaintExupéry
+1	
+
+1029	
+Admirável Mundo Novo  
+Aldous Huxley
+1	
+
+1030	
+O Morro dos Ventos Uivantes  
+Emily Brontë
+1	
+
+1031	
+O Conde de Monte Cristo  
+Alexandre Dumas
+1	
+
+1032	
+O Vermelho e o Negro  
+Stendhal
+1	
+
+1033	
+As Crônicas de Nárnia  
+C.S. Lewis
+1	
+
+1034	
+A Revolução dos Bichos  
+George Orwell
+1	
+
+1035	
+O Velho e o Mar  
+Ernest Hemingway
+1	
+
+1036	
+Drácula  
+Bram Stoker
+1	
+
+1037	
+Lolita  
+Vladimir Nabokov
+1	
+
+1038	
+Mrs. Dalloway   
+Virginia Woolf
+1	
+1039	
+Os Irmãos Karamazov  
+Fyodor Dostoevsky
+1	
+1040	
+Madame Bovary  
+Gustave Flaubert
+1	
+1041	
+O Fim da Eternidade  
+Isaac Asimov
+1	
+1042	
+Memórias Póstumas de Brás Cubas  
+Machado de Assis
+1	
+1043	
+A Sangue Frio  
+Truman Capote
+1	
+1044	
+O Nome da Rosa  
+Umberto Eco
+1	
+1045	
+Anna Karenina  
+Liev Tolstói
+1	
+
+1046	
+O Sol é para Todos  
+Harper Lee
+1	
+
+1047	
+O Morro dos Ventos Uivantes  
+Emily Brontë
+1	
+
+1048	
+Os Miseráveis  
+Victor Hugo
+1	
+
+1049	
+O Estrangeiro  
+Albert Camus
+1	
+
+1050	
+A Insustentável Leveza do Ser  
+Milan Kundera
+1	
+
+1051	
+O Fim da Eternidade  
+Isaac Asimov
+1	
+
+1052	
+Memórias Póstumas de Brás Cubas  
+Machado de Assis
+1	
+
+1053	
+A Sangue Frio  Truman Capote
+1	
+
+1054	
+O Nome da Rosa  
+Umberto Eco
+1	
+
+1055	
+Anna Karenina  
+Liev Tolstói
+1	
+
+1056	
+A Montanha Mágica  
+Thomas Mann
+1	
+
+1057	
+O Processo  
+Franz Kafka
+1	
+1058	
+Crime e Castigo  
+Fyodor Dostoevsky
+1	
+1059	
+Dom Casmurro  
+Machado de Assis
+1	
+1060	
+O Retrato de Dorian Gray  
+Oscar Wilde
+5
+1	
+1061	
+A Revolução dos Bichos      
+George Orwell
+
