@@ -393,20 +393,29 @@ int main() {
       
       //Função de busca por código
       case 2: 
-      arvore.imprimir();
-      //   cout << "Digite o código do Livro que deseja buscar:" << "\n";
-      //   cin >> codigo;
-      //  arvore.buscaPorCodigo(codigo);
-        
-       break;
+        cout << "Digite o código do Livro que deseja buscar:" << "\n";
+        cin >> codigo;
+        Livro *livro = arvore.buscaPorCodigo(codigo);
+        if (livro == nullptr) {
+          cout << "Não possuimos um livro com esse título no acervo" << endl;
+        } else {
+          cout << "Livro encontrado: " << string(*livro) << endl;
+        }
+
+        break;
 
        //Função de busca por título
       case 3: 
         cout << "Digite o título do Livro que deseja buscar:" << "\n";
         cin >> titulo;
-       arvore.buscaPorTitulo(titulo);
+        Livro *livro = arvore.buscaPorTitulo(titulo);
+        if (livro == nullptr) {
+          cout << "Não possuimos um livro com esse título no acervo" << endl;
+        } else {
+          cout << "Livro encontrado: " << string(*livro) << endl;
+        }
         
-       break;
+        break;
 
       //Função de remoção
       case 4:
