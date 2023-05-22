@@ -58,7 +58,7 @@ public:
   NoArvore *filhoDireita; //=nullptr;
 
   /** Altura do no */
-  short altura;
+  int altura;
 
   NoArvore(Livro *valor) { 
     this->valor = valor;   
