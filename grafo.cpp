@@ -243,7 +243,7 @@ public:
  
   Livro *buscaPorTitulo(string titulo, NoArvore *no) {
     if (no == nullptr) {
-       cout << "Não possuimos um livro com esse título no acervo" << "\n";
+       
       return nullptr;
     }
  
@@ -272,7 +272,7 @@ public:
  
   Livro *buscaPorCodigo(int codigo, NoArvore *no) {
     if (no == nullptr) {
-       cout << "Não possuimos um livro com esse código no acervo" << "\n";
+       
       return nullptr;
     }
  
