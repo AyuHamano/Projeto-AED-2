@@ -1,6 +1,6 @@
-1 1	A Arte da Persuasão                     
-1 2	A Beleza da Natureza       
-1 3	A Cozinha dos Sabores       
+1 1	A Arte da Persuasão                  
+1 2	A Beleza da Natureza      
+1 3	A Cozinha dos Sabores 
 1 4	A Dança da Vida       
 1 5	A Esperança Renovada       
 1 6	A Fantasia Desvendada        
@@ -1004,10 +1004,1011 @@
 1 1004 Mulheres na História
 1 1005 Mistérios da Vida
 1 1006 Magia Despertada
-1 1007 Mentes Brilhantes           
-
-
-
-
-
-
+1 1007 Mentes Brilhantes  
+3 A Arte da Persuasão    
+3 A Beleza da Natureza   
+3 A Cozinha dos Sabores 
+3 A Dança da Vida       
+3 A Esperança Renovada   
+3 A Fantasia Desvendada  
+3 A Grande Aventura      
+3 A História Proibida    
+3 A Ilha dos Segredos    
+3 A Jornada Incansável   
+3 A Lei do Destino       
+3 A Magia Oculta       
+3 A Noite Estrelada      
+3 A Origem Perdida       
+3 A Paixão Incontrolável 
+3 A Questão Decisiva     
+3 A Razão do Coração     
+3 A Sociedade Revelada   
+3 A Terra dos Sonhos     
+3 A União dos Mundos     
+3 A Viagem Inesquecível  
+3 A Voz do Silêncio      
+3 A Última Fronteira     
+3 Ação e Aventura
+3 Alma em Ascensão
+3 Amor Proibido
+3 Anjos e Arcanjos
+3 Aprendendo com a Vida
+3 Aromas da Paixão
+3 As Cores do Arco-Íris
+3 As Estrelas Cintilantes
+3 As Flores do Jardim
+3 As Grandes Descobertas
+3 As Horas Perdidas
+3 As Lendas Antigas
+3 As Maravilhas da Criaçã
+3 As Noites de Verão
+3 As Palavras Mágicas
+3 As Quatro Estações
+3 As Ruas da Cidade
+3 Asas da Liberdade
+3 Até o Fim do Mundo
+3 Aventuras Além do Horiz
+3 Aventuras Submarinas
+3 Ação em Alto Mar
+3 Aço e Fogo
+3 Açúcar e Especiarias
+3 Açúcar Queimado
+3 Açúcar Refinado
+3 Águas Profundas
+3 Além das Montanhas
+3 Além do Infinito
+3 Além dos Limites
+3 Alquimia do Amor
+3 Amizade Verdadeira
+3 Amor em Chamas
+3 Amor e Desafios
+3 Amor Eterno
+3 Amor Proibido
+3 Amor Sem Fronteiras
+3 Amores Perdidos
+3 Aromas da Natureza
+3 Aromas e Sabores
+3 Arquitetura do Futuro
+3 Arte e Criatividade
+3 Asas da Imaginação
+3 Asas do Tempo
+3 Atos de Bondade
+3 Atrás das Cortinas
+3 Autossuperação
+3 Avanços Científicos
+3 Aventuras no Espaço
+3 Aventuras no Mundo Anim
+3 Aventuras Perigosas
+3 Aventuras na Floresta
+3 Aventuras no Deserto
+3 Aventuras nas Montanhas
+3 Aventuras na Selva
+3 Aventuras Secretas
+3 Aventuras Sobrenaturais
+3 Ação e Suspense
+3 Ação Heroica
+3 Ação em Dose Dupla
+3 Beleza Interior
+3 Brilho da Aurora
+3 Busca pelo Tesouro
+3 Baladas de Amor
+3 Baús de Segredos
+3 Beijos Roubados
+3 Batalha dos Sonhos
+3 Brisa do Mar
+3 Brincando com o Destino
+3 Brechas do Tempo
+3 Belas Mentiras
+3 Buscando Respostas
+3 Brumas da Paixão
+3 Beleza Eterna
+3 Baile de Máscaras
+3 Brigas e Amores
+3 Brilho no Escuro
+3 Belezas Naturais
+3 Brilho da Lua
+3 Bússola do Coração
+3 Brilho no Olhar
+3 Bênçãos Divinas
+3 Baile das Estrelas
+3 Baladas da Juventude
+3 Beijos Proibidos
+3 Brisa Suave
+3 Bravura e Honra
+3 Buscando a Liberdade
+3 Bruxas e Feitiços
+3 Brincando com Fogo
+3 Beleza Intensa
+3 Brumas da Memória
+3 Baús de Histórias
+3 Beija-Flor Encantado
+3 Batalha Interior
+3 Brilho da Esperança
+3 Brisa do Entardecer
+3 Belezas Ocultas
+3 Brilho no Abismo
+3 Buscando o Paraíso
+3 Bem-Vindos ao Infern
+3 Brisa da Manhã
+3 Brumas do Passado
+3 Beijos Ardentes
+3 Bruxas da Noite
+3 Brilho na Escuridão
+3 Baile dos Sonhos
+3 Baladas da Alma
+3 Belezas Selvagens
+3 Brilho nas Estrelas
+3 Brilho da Vida
+3 Batalha dos Corações
+3 Brisa da Liberdade
+3 Beija-Flor em Flor
+3 Brumas do Amor
+3 Baús de Lembranças
+3 Beijos da Meia-Noite
+3 Bruxas Modernas
+3 Brilho no Céu
+3 Buscando a Verdade
+3 Bem-Vindos à Loucura
+3 Brisa do Verão
+3 Brumas do Silêncio
+3 Beijos Prodigiosos
+3 Brilho nas Águas
+3 Brilho da Felicidade
+3 Batalha da Superação
+3 Brisa da Montanha
+3 Belezas Inesquecívei
+3 Brilho no Horizonte
+3 Brumas da Solidão
+3 Baús de Emoções
+3 Beijos Desenfreados
+3 Bruxas do Destino
+3 Brilho Noturno
+3 Buscando a Redenção
+3 Bem-Vindos ao Caos
+3 Brisa da Primavera
+3 Brumas do Desejo
+3 Beijos Ressurgidos
+3 Brilho nas Pedras
+3 Brilho da Superação
+3 Batalha do Amor
+3 Brisa da Inspiração
+3 Belezas Radiantes
+3 Caminhos da Vida
+3 Corações Partidos
+3 Cidades Perdidas
+3 Canto da Esperança
+3 Círculos do Destino
+3 Conquistas da Alma
+3 Confissões de Amor
+3 Caçadores de Tesouro
+3 Contos Fantásticos
+3 Cidades em Ruínas
+3 Coragem e Determinaç
+3 Céu Estrelado
+3 Chamas da Paixão
+3 Cores da Natureza
+3 Criaturas Mágicas
+3 Caçada Implacável
+3 Caminhos do Passado
+3 Confissões Secretas
+3 Céu de Outono
+3 Canções da Vida
+3 Código da Verdade
+3 Ciclos da Existência
+3 Coragem Silenciosa
+3 Cidades Encantadas
+3 Conexões Inesperadas
+3 Contos Infantis
+3 Chamas da Vingança
+3 Corrida pelo Tempo
+3 Chaves do Mistério
+3 Canto da Liberdade
+3 Cidade dos Sonhos
+3 Coragem à Flor da Pe
+3 Caos e Destruição
+3 Caminhos Esquecidos
+3 Confusões Amorosas
+3 Céu de Inverno
+3 Criaturas do Abismo
+3 Conflitos Internos
+3 Conquistas Inalcançá
+3 Círculo de Amizade
+3 Caminhos da Solidão
+3 Código do Amor
+3 Cicatrizes do Passad
+3 Chamas da Redenção
+3 Cidades em Movimento
+3 Corações em Chamas
+3 Contos de Fadas
+3 Conquistas Supremas
+3 Céu de Verão
+3 Contratempos do Dest
+3 Caçadores de Sonhos
+3 Caminhos da Superaçã
+3 Confissões Obscuras
+3 Círculos da Vida
+3 Coragem à Beira do A
+3 Cidades Proibidas
+3 Conexões Perdidas
+3 Contos de Mistério
+3 Chamas da Tentação
+3 Coração Indomável
+3 Caos no Paraíso
+3 Caminhos da Esperanç
+3 Confissões Proibidas
+3 Céu de Primavera
+3 Criaturas da Noite
+3 Cidades Secretas
+3 Corações Despedaçado
+3 Contos de Aventura
+3 Conexões Eternas
+3 Círculo do Destino
+3 Caminhos da Transfor
+3 Corações em Guerra
+3 Canto da Melancolia
+3 Cidades Encobertas
+3 Confissões Ocultas
+3 Céu de Estrelas
+3 Criaturas da Imagina
+3 Contratempos do Amor
+3 Corrida pela Liberda
+3 Caos no Horizonte
+3 Caminhos do Amor
+3 Confissões Silencios
+3 Círculos da Paixão
+3 Cidades em Chamas
+3 Corações Apaixonados
+3 Despertar da Alma
+3 Destinos Cruzados
+3 Desejos Secretos
+3 Dança das Emoções
+3 Desafios da Vida
+3 Descobertas Surpreen
+3 De Volta ao Passado
+3 Desejos Proibidos
+3 Destino Incerto
+3 Domínio das Sombras
+3 Diamantes do Destino
+3 Danças da Noite
+3 Desejos Ocultos
+3 Dose de Aventura
+3 Desejos e Enganos
+3 Devaneios da Imagina
+3 Despedaçando Barreir
+3 Dádivas do Amor
+3 Dançando com o Perig
+3 Destino em Jogo
+3 Delírios da Paixão
+3 Doce Amargura
+3 Descobrindo Verdades
+3 Desejos Incontroláve
+3 Desejos que Incendei
+3 Destino Traçado
+3 Despertar da Consciê
+3 Deixando o Passado p
+3 Desafios do Coração
+3 Dançando Sob a Lua
+3 Desejos Impossíveis
+3 Dose de Mistério
+3 Desejos em Chamas
+3 Destino e Redenção
+3 Danças da Alma
+3 Doce Pecado
+3 Desvendando Enigmas
+3 Dose de Adrenalina
+3 Desejos Roubados
+3 Desejos que Transfor
+3 Deixando a Dor para 
+3 Desafios do Destino
+3 Dançando com as Estr
+3 Desejos Intensos
+3 Destino de Guerreiro
+3 Delícias do Amor
+3 Despertar da Paixão
+3 Dose de Suspense
+3 Desejos Vingativos
+3 Desejos Imortais
+3 Destinos Entrelaçado
+3 Dançando na Escuridã
+3 Desejos Selvagens
+3 Desvendando Segredos
+3 Doce Ilusão
+3 Desafios da Superaçã
+3 Deixando o Medo para
+3 Dose de Perigo
+3 Desejos Obscuros
+3 Desejos que Consomem
+3 Destino Indomável
+3 Dançando com a Sorte
+3 Desejos Fatais
+3 Despertar dos Sentid
+3 Doce Sedução
+3 Desvendando Mistério
+3 Dose de Ação
+3 Desejos Imprevisívei
+3 Destino Ardente
+3 Dançando nas Ondas
+3 Desejos Inesquecívei
+3 Desafios do Amor Pró
+3 Deixando o Passado n
+3 Dose de Emoção
+3 Desejos Noturnos
+3 Desejos que Transfor
+3 Destinos Desconhecid
+3 Danças do Coração
+3 Doce Proibição
+3 Despertar do Desejo
+3 Dose de Mistério e R
+3 Desejos Irresistívei
+3 Destino Selvagem
+3 Em Busca da Verdade
+3 Enigmas do Destino
+3 Entre o Amor e a Raz
+3 Escritos da Alma
+3 Estrelas da Noite
+3 Emoções Desenfreadas
+3 Encantos da Natureza
+3 Essência do Ser
+3 Escolhas Decisivas
+3 Ecos do Passado
+3 Encontros Inesperado
+3 Escuridão e Luz
+3 Estações da Vida
+3 Emoções à Flor da Pe
+3 Elos do Destino
+3 Encantamentos Mágico
+3 Entre o Céu e a Terr
+3 Estrelas Cadentes
+3 Emoções Proibidas
+3 Ecos da Memória
+3 Enigmas do Amor
+3 Eternidade no Olhar
+3 Explorando Horizonte
+3 Encantos Perdidos
+3 Entrelinhas da Vida
+3 Estrelas Distantes
+3 Emoções Ocultas
+3 Encruzilhada do Dest
+3 Esplendor da Naturez
+3 Enigmas da Existênci
+3 Escolhas do Coração
+3 Ecos da Imaginação
+3 Encontros Marcados
+3 Estrelas Brilhantes
+3 Emoções Vibrantes
+3 Entre o Sonho e a Re
+3 Encantos da Magia
+3 Essência da Felicida
+3 Elos Partidos
+3 Explorando Mistérios
+3 Enigmas do Passado
+3 Ecos do Silêncio
+3 Encantos da Aventura
+3 Entre Risos e Lágrim
+3 Estrelas Radiantes
+3 Emoções Despedaçadas
+3 Entre Mundos Paralel
+3 Eternidade no Tempo
+3 Explorando a Imagina
+3 Enigmas da Alma
+3 Escolhas Transformad
+3 Ecos do Amor
+3 Encantos do Crepúscu
+3 Entrelinhas do Desti
+3 Estrelas em Ascensão
+3 Emoções Prodigiosas
+3 Encruzilhadas da Vid
+3 Essência do Amor
+3 Elos Inquebráveis
+3 Explorando Possibili
+3 Enigmas do Coração
+3 Ecos da Natureza
+3 Encantos do Luar
+3 Entrelinhas do Tempo
+3 Estrelas Fulgurantes
+3 Emoções Desafiadoras
+3 Entrelinhas da Paixã
+3 Eternidade no Amor
+3 Explorando o Desconh
+3 Enigmas da Imaginaçã
+3 Escolhas Inevitáveis
+3 Ecos da Aventura
+3 Encantos da Fantasia
+3 Entrelinhas do Desti
+3 Estrelas Reluzentes
+3 Emoções Resplandecen
+3 Entre Palavras e Sil
+3 Eternidade na Alma
+3 Explorando a Naturez
+3 Enigmas da Vida
+3 Escolhas Difíceis
+3 Ecos do Passado
+3 Encantos do Amanhece
+3 Fragmentos de Amor
+3 Flores no Jardim
+3 Fios do Destino
+3 Fogo da Paixão
+3 Filhos da Esperança
+3 Fuga da Realidade
+3 Fadas e Encantamento
+3 Folhas ao Vento
+3 Feitiços do Amor
+3 Fortaleza da Alma
+3 Farsas do Destino
+3 Fim do Silêncio
+3 Fios da Memória
+3 Fragmentos de Sonhos
+3 Fugindo da Escuridão
+3 Fantasias Secretas
+3 Fronteiras do Amor
+3 Fios da Vida
+3 Fuga para o Paraíso
+3 Fases da Lua
+3 Fios do Tempo
+3 Feridas da Alma
+3 Fúria e Redenção
+3 Filhas da Esperança
+3 Fragmentos do Passad
+3 Fugindo do Destino
+3 Fogo da Vingança
+3 Feitiços Proibidos
+3 Fortaleza do Coração
+3 Farsas da Vida
+3 Fim da Ilusão
+3 Fios do Destino
+3 Fragmentos de Espera
+3 Fugindo da Realidade
+3 Fantasmas do Passado
+3 Fronteiras da Paixão
+3 Fios da Imaginação
+3 Fuga dos Sonhos
+3 Flores da Primavera
+3 Fúria Implacável
+3 Filhos da Liberdade
+3 Fragmentos do Amor
+3 Fugindo do Medo
+3 Fios da Superação
+3 Feitiços do Destino
+3 Fortaleza da Vontade
+3 Farsas da Ilusão
+3 Fim do Mistério
+3 Fios da Transformaçã
+3 Fuga das Sombras
+3 Fantasias Desvendada
+3 Fronteiras do Desejo
+3 Fios da Esperança
+3 Fuga para o Desconhe
+3 Flores do Verão
+3 Fúria dos Deuses
+3 Filhos da Revolução
+3 Fragmentos da Vida
+3 Fugindo da Solidão
+3 Fios da Redenção
+3 Feitiços da Alma
+3 Fortaleza dos Sonhos
+3 Farsas do Coração
+3 Fim da Escuridão
+3 Fios da Aventura
+3 Fuga dos Segredos
+3 Fantasias Proibidas
+3 Fronteiras da Corage
+3 Fios da Liberdade
+3 Fuga para o Infinito
+3 Flores do Outono
+3 Fúria Incontrolável
+3 Filhos da Esperança
+3 Fragmentos do Destin
+3 Fugindo do Passado
+3 Fios da Memória
+3 Feitiços do Amor Ete
+3 Fortaleza do Perdão
+3 Farsas do Tempo
+3 Fim do Silêncio
+3 Fios do Destino
+3 Fragmentos de Sonhos
+3 Fugindo da Escuridão
+3 Fantasias Secretas
+3 Fronteiras do Amor
+3 Fios da Vida
+3 Fuga para o Paraíso
+3 Fases da Lua
+3 Fios
+3 Guardiões do Destino
+3 Galáxias Perdidas
+3 Gritos Silenciosos
+3 Garotas Irresistívei
+3 Gravidade das Emoçõe
+3 Gênios da Ciência
+3 Guerra dos Mundos
+3 Gaiola de Ouro
+3 Grandes Mistérios
+3 Guerreiros da Luz
+3 Graciosas Aventuras
+3 Gravando Memórias
+3 Gargantas da Noite
+3 Geração Futura
+3 Garotas Poderosas
+3 Guia da Sobrevivênci
+3 Gritos do Passado
+3 Gênios da Arte
+3 Guerreiros da Espera
+3 Garotas Rebeldes
+3 Gravidade da Paixão
+3 Guia dos Sonhos
+3 Gritos da Alma
+3 Garotos Perdidos
+3 Guardiões da Magia
+3 Galáxias Distantes
+3 Grãos de Sabedoria
+3 Guerra dos Corações
+3 Gargalhadas na Chuva
+3 Gravando Sentimentos
+3 Garotas Desafiadoras
+3 Gritos da Liberdade
+3 Gênios da Literatura
+3 Guerreiros do Amor
+3 Graciosas Lembranças
+3 Guia do Conhecimento
+3 Garotas Poderosas
+3 Gravidade dos Sonhos
+3 Gritos do Silêncio
+3 Guardiões da Imagina
+3 Galáxias em Colisão
+3 Grãos de Felicidade
+3 Guerra dos Sentiment
+3 Gargalhadas Eternas
+3 Gênios da Música
+3 Guerreiros da Corage
+3 Graciosos Encontros
+3 Guardiões da Naturez
+3 Garotas Rebeldes
+3 Gravidade do Destino
+3 Guia das Estrelas
+3 Gritos do Coração
+3 Garotos Perdidos
+3 Guardiões da Históri
+3 Galáxias Desconhecid
+3 Grãos de Inspiração
+3 Guerra dos Sonhos
+3 Gargalhadas ao Vento
+3 Gênios da Filosofia
+3 Guerreiros da Determ
+3 Graciosos Reencontro
+3 Guardiões da Aventur
+3 Garotas Destemidas
+3 Gravidade da Vida
+3 Guia dos Caminhos
+3 Gritos da Verdade
+3 Garotos Desafiadores
+3 Guardiões da Fantasi
+3 Galáxias Fascinantes
+3 Grãos de Esperança
+3 Guerra dos Desejos
+3 Gargalhadas Infinita
+3 Gênios da História
+3 Guerreiros da Transf
+3 Graciosas Descoberta
+3 Guardiões do Conheci
+3 Garotas Inspiradoras
+3 Gravidade do Amor
+3 Guia dos Sentimentos
+3 Gritos da Consciênci
+3 Histórias de Amor
+3 Heranças Perdidas
+3 Horizontes Distantes
+3 Heróis da Vida
+3 Harpas Celestiais
+3 Horas de Solidão
+3 Histórias Proibidas
+3 Horizonte Infinito
+3 Herdeiros da Esperan
+3 Harmonias da Naturez
+3 Heranças Obscuras
+3 Horizontes da Imagin
+3 Heróis da Liberdade
+3 Horas de Paixão
+3 Histórias Secretas
+3 Horizonte Radiante
+3 Herdeiros do Destino
+3 Harmonia dos Sentido
+3 Heranças Esquecidas
+3 Horizontes da Vida
+3 Heróis da Aventura
+3 Horas de Desespero
+3 Histórias Desconheci
+3 Horizonte Sereno
+3 Herdeiros da Magia
+3 Harmonia dos Sonhos
+3 Heranças Perigosas
+3 Horizontes da Alma
+3 Heróis da Fantasia
+3 Horas de Angústia
+3 Histórias Prodigiosa
+3 Horizonte Deslumbran
+3 Herdeiros da Paixão
+3 Harmonia dos Coraçõe
+3 Heranças Reveladas
+3 Horizontes da Felici
+3 Heróis da Superação
+3 Horas de Reflexão
+3 Histórias Esquecidas
+3 Horizonte Eterno
+3 Herdeiros do Amor
+3 Harmonia dos Sentime
+3 Heranças Desafiadora
+3 Horizontes da Supera
+3 Heróis da Coragem
+3 Horas de Esperança
+3 Histórias Deslumbran
+3 Horizonte Magnífico
+3 Herdeiros da Imagina
+3 Harmonia dos Destino
+3 Heranças Dolorosas
+3 Horizontes da Transf
+3 Heróis da Conquista
+3 Horas de Ilusão
+3 Histórias Fantástica
+3 Horizonte Acolhedor
+3 Herdeiros do Mistéri
+3 Harmonia dos Sonhos
+3 Heranças Inesquecíve
+3 Horizontes da Corage
+3 Heróis da Determinaç
+3 Horas de Adversidade
+3 Histórias Inspirador
+3 Horizonte Brilhante
+3 Herdeiros da Naturez
+3 Harmonia dos Instant
+3 Heranças Eternas
+3 Horizontes da Sabedo
+3 Heróis da Esperança
+3 Horas de Felicidade
+3 Histórias Marcantes
+3 Horizonte Desafiador
+3 Herdeiros do Destino
+3 Harmonia dos Encontr
+3 Heranças Despedaçada
+3 Horizontes da Renova
+3 Heróis da Transforma
+3 Horas de Liberdade
+3 Histórias Notáveis
+3 Horizonte Sereno
+3 Herdeiros da Magia
+3 Harmonia dos Momento
+3 Heranças Proibidas
+3 Ilusões Perdidas
+3 Imensidão dos Sonhos
+3 Inocência Roubada
+3 Império das Sombras
+3 Infinito Amor
+3 Inverno da Alma
+3 Ícones da História
+3 Inspirações Divinas
+3 Indomável Coração
+3 Imagens da Vida
+3 Ilha dos Segredos
+3 Incertezas do Destin
+3 Insônia Noturna
+3 Infância Colorida
+3 Inesperada Traição
+3 Identidades Ocultas
+3 Incandescente Paixão
+3 Infinitas Possibilid
+3 Inquietude do Coraçã
+3 Imortalidade Almejad
+3 Inocência Despedaçad
+3 Ilusões do Passado
+3 Inesquecível Aventur
+3 Inverno de Esperança
+3 Ícones da Cultura
+3 Inspirações Poéticas
+3 Indomável Destino
+3 Imaginação Fértil
+3 Incógnitas do Amor
+3 Infindáveis Horizont
+3 Ilha do Esquecimento
+3 Incertezas do Tempo
+3 Infinito Abraço
+3 Inocência Roubada
+3 Império das Emoções
+3 Insensível Despedida
+3 Imagens do Passado
+3 Ilusões Perdidas
+3 Inocência Reconquist
+3 Incógnitas da Vida
+3 Inverno de Lembrança
+3 Ícones da Literatura
+3 Inspirações do Coraç
+3 Indomáveis Sonhos
+3 Imaginação Colorida
+3 Incertezas do Destin
+3 Inquebrável Vínculo
+3 Infinita Eternidade
+3 Inocência Ferida
+3 Ilusões Desfeitas
+3 Inesperada Reviravol
+3 Incandescente Desejo
+3 Infinitas Conquistas
+3 Inquietude da Alma
+3 Imortalidade Alcança
+3 Inocência Perdida
+3 Ilha do Mistério
+3 Inverno de Amor
+3 Ícones da Arte
+3 Inspirações do Desti
+3 Indomável Paixão
+3 Imaginação Selvagem
+3 Incógnitas do Passad
+3 Infindáveis Lembranç
+3 Ilusões Despedaçadas
+3 Inocência Traída
+3 Império dos Sentidos
+3 Insensível Adeus
+3 Imagens da Jornada
+3 Ilusões Renovadas
+3 Inocência Reconstruí
+3 Incertezas do Caminh
+3 Infinito Encontro
+3 Inesperada Esperança
+3 Indomáveis Anseios
+3 Imaginação Brilhante
+3 Incógnitas do Futuro
+3 Inverno de Recomeço
+3 Ícones da Inspiração
+3 Inspirações Celestia
+3 Indomável Espírito
+3 Infinitos Mistérios
+3 Jardim de Rosas
+3 Jogo da Vida
+3 Justiça Divina
+3 Jornada Perdida
+3 Janela para o Mundo
+3 Juramentos Quebrados
+3 Jovens e Rebeldes
+3 Jardim Secreto
+3 Juntos para Sempre
+3 Jornal das Sombras
+3 Jogo do Destino
+3 Justiça Imortal
+3 Jardim dos Sonhos
+3 Jóia Rara
+3 Jornada ao Desconhec
+3 Janela da Alma
+3 Jurisdição Fatal
+3 Jovens Brilhantes
+3 Jardim das Paixões
+3 Juramentos Eternos
+3 Jogo Perigoso
+3 Jornal do Mistério
+3 Jovens na Escuridão
+3 Jardim das Lembrança
+3 Justiça em Chamas
+3 Jornada pela Liberda
+3 Janela do Tempo
+3 Jurisdição Oculta
+3 Jovens Destemidos
+3 Jardim das Ilusões
+3 Jogo de Máscaras
+3 Justiça Cega
+3 Jornada Solitária
+3 Janela para o Passad
+3 Jovens no Limiar
+3 Jardim dos Segredos
+3 Juramentos Esquecido
+3 Jogo da Sedução
+3 Jornal das Memórias
+3 Justiça Inabalável
+3 Jardim dos Sentidos
+3 Jóia do Deserto
+3 Jornada da Esperança
+3 Janela da Imaginação
+3 Jovens em Fuga
+3 Jardim dos Desejos
+3 Juramentos Proibidos
+3 Jogo da Traição
+3 Jornal dos Pesadelos
+3 Justiça em Ruínas
+3 Jardim das Recordaçõ
+3 Jóia do Tempo
+3 Jornada Desafiadora
+3 Janela da Verdade
+3 Jovens na Escuridão
+3 Jardim dos Segredos
+3 Juramentos Partidos
+3 Jogo da Sobrevivênci
+3 Jornal dos Sonhos
+3 Justiça em Queda
+3 Jardim dos Sentiment
+3 Jóia da Paixão
+3 Jornada do Coração
+3 Janela da Vida
+3 Jovens no Abismo
+3 Jardim das Ilusões
+3 Juramentos Selados
+3 Jogo da Obsessão
+3 Jornal das Revelaçõe
+3 Justiça Fragilizada
+3 Jardim dos Enigmas
+3 Jóia do Amor
+3 Jornada Interminável
+3 Janela dos Segredos
+3 Jovens em Conflito
+3 Jardim dos Encantos
+3 Juramentos Secretos
+3 Jogo do Silêncio
+3 Jornal das Emoções
+3 Justiça em Suspenso
+3 Jardim dos Suspiros
+3 Jóia da Liberdade
+3 Luzes da Cidade
+3 Labirinto de Ilusões
+3 Lembranças Perdidas
+3 Lua Cheia
+3 Livre para Sonhar
+3 Lendas Antigas
+3 Lições do Passado
+3 Laços Inquebráveis
+3 Lágrimas de Amor
+3 Liberdade Interior
+3 Longe de Casa
+3 Lendas Urbanas
+3 Luz da Esperança
+3 Lua de Prata
+3 Livros Proibidos
+3 Lealdade Traída
+3 Laços de Sangue
+3 Lágrimas de Felicida
+3 Lendas do Oeste
+3 Luzes da Noite
+3 Lua Negra
+3 Labirinto de Mistéri
+3 Lembranças Esquecida
+3 Livre Arbítrio
+3 Laços Eternos
+3 Lágrimas de Saudade
+3 Lendas do Mar
+3 Luzes da Alma
+3 Lua de Sangue
+3 Livros Encantados
+3 Lealdade Testada
+3 Labirinto do Medo
+3 Lembranças Amargas
+3 Liberdade Proibida
+3 Longa Jornada
+3 Lendas Esquecidas
+3 Luzes da Vida
+3 Lua Azul
+3 Livros Malditos
+3 Laços Perdidos
+3 Lágrimas do Passado
+3 Lendas da Magia
+3 Luzes da Cidade
+3 Lua Dourada
+3 Livros Amaldiçoados
+3 Lealdade Profunda
+3 Labirinto da Mente
+3 Lembranças Distantes
+3 Liberdade Almejada
+3 Longas Noites
+3 Lendas Perigosas
+3 Luzes da Eternidade
+3 Lua Crescente
+3 Livros Encarcerados
+3 Laços Desfeitos
+3 Lágrimas de Angústia
+3 Lendas da Mitologia
+3 Luzes da Inspiração
+3 Lua de Cristal
+3 Livros Prodigiosos
+3 Lealdade Perdida
+3 Labirinto das Sombra
+3 Lembranças Despedaça
+3 Liberdade Roubada
+3 Longos Caminhos
+3 Lendas Esquecidas
+3 Luzes da Consciência
+3 Lua de Outono
+3 Livros Esquecidos
+3 Laços Despedaçados
+3 Lágrimas de Redenção
+3 Lendas da Fantasia
+3 Luzes do Infinito
+3 Lua Encantada
+3 Livros Proibitivos
+3 Lealdade Traída
+3 Labirinto do Tempo
+3 Lembranças Ocultas
+3 Liberdade Reconquist
+3 Longas Viagens
+3 Lendas do Tempo
+3 Luzes do Firmamento
+3 Lua de Inverno
+3 Livros Roubados
+3 Laços Eternos
+3 Lágrimas de Libertaç
+3 Lendas da Natureza
+3 Luzes da Inspiração
+3 Memórias de um Viaja
+3 Mistérios do Tempo
+3 Meu Amor Proibido
+3 Mundos Paralelos
+3 Marcas da Traição
+3 Maré Alta
+3 Mentes Brilhantes
+3 Magia Perdida
+3 Mulheres do Destino
+3 Milagre nas Entrelin
+3 Morte e Renascimento
+3 Mergulho Profundo
+3 Meu Lugar no Mundo
+3 Mar de Possibilidade
+3 Máscaras da Noite
+3 Mistérios do Passado
+3 Música da Alma
+3 Meu Coração em Segre
+3 Marca da Vingança
+3 Melodia da Paixão
+3 Memórias Esquecidas
+3 Mundos em Colisão
+3 Mistério nas Sombras
+3 Magia e Encantamento
+3 Mentes Inquietas
+3 Meu Eterno Amor
+3 Marés Agitadas
+3 Marcas do Destino
+3 Morte na Escuridão
+3 Mistério Subterrâneo
+3 Música do Silêncio
+3 Meu Refúgio Secreto
+3 Marca do Passado
+3 Mil Versos de Amor
+3 Memórias Perdidas
+3 Mundos Distantes
+3 Mulheres de Coragem
+3 Mistérios do Abismo
+3 Magia Proibida
+3 Meu Destino Incerto
+3 Marés Revoltas
+3 Marcas do Tempo
+3 Morte na Noite
+3 Mistério Desvendado
+3 Música do Coração
+3 Meu Pequeno Paraíso
+3 Marca da Ilusão
+3 Melodia da Liberdade
+3 Memórias Despedaçada
+3 Mundos em Guerra
+3 Mulheres sem Limites
+3 Mistérios da Alquimi
+3 Magia Encantadora
+3 Mentes Sombrias
+3 Meu Eterno Refúgio
+3 Marés Tranquilas
+3 Marcas do Passado
+3 Morte no Horizonte
+3 Mistério Revelado
+3 Música do Destino
+3 Meu Segredo Mais Pro
+3 Marca da Redenção
+3 Melodia da Esperança
+3 Memórias Escondidas
+3 Mundos em Colapso
+3 Mulheres no Poder
+3 Mistérios da Escurid
+3 Magia dos Sonhos
+3 Mentes Poderosas
+3 Meu Grande Amor
+3 Marés Silenciosas
+3 Marcas Indeléveis
+3 Morte em Versos
+3 Mistério Abandonado
+3 Música do Silêncio
+3 Meu Refúgio Perfeito
+3 Marca da Traição
+3 Melodia da Melancol
+3 Memórias Reveladas
+3 Mundos em Conflito
+3 Mulheres na Históri
+3 Mistérios da Vida
+3 Magia Despertada
+3 Mentes Brilhantes  
