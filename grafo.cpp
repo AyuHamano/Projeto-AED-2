@@ -301,7 +301,7 @@ public:
             aux = aux->filhoDireita;
           } 
           raiz->valor=aux->valor;
-          aux->valor->codigo = codigo;
+          codigo = aux->valor->codigo;
           raiz->filhoEsquerda = remover(raiz->filhoEsquerda, codigo);
           return raiz;
         }
@@ -325,7 +325,7 @@ public:
       }
       cout << "Livro removido com sucesso" << "\n";
     atualizaAltura(raiz);
-    balancearNo(raiz);
+    raiz = balancearNo(raiz);
       return raiz;
   }
 
@@ -360,6 +360,7 @@ int main() {
   Arvore arvore;
   int codigo, op;
   string titulo, autor;
+  FILE *teste;
 
   arvore.adicionar(new Livro("O Senhor dos Anéis", "J. R. R. Tolkien", 1));
 
@@ -374,6 +375,12 @@ int main() {
   arvore.adicionar(new Livro("Metamorfose", "Franz Kafka", 6)); 
   arvore.imprimir(); 
 
+  teste = fopen("./casosTeste.txt", "r");
+  if (teste == NULL)
+{
+    printf("Problemas na leitura do arquivo\n");
+    return;
+}
   do{
     menu();
      cin >> op;
@@ -381,18 +388,18 @@ int main() {
 
       //Função de inserção
       case 1:
-         cout << "Digite o Titulo do Livro que deseja inserir:" << "\n";
+         cout << "Digite o código do Livro que deseja inserir:" << "\n";
+         cin >> codigo;
+         cout << "Digite o título do Livro que deseja inserir:" << "\n";
          cin >> titulo;
          cout << "Digite o autor do Livro que deseja inserir:" << "\n";
          cin >> autor;
-         cout << "Digite o código do Livro que deseja inserir:" << "\n";
-         cin >> codigo;
         arvore.adicionar(new Livro(titulo, autor, codigo));
 
        break;
       
       //Função de busca por código
-      case 2: 
+      case 2: { 
         cout << "Digite o código do Livro que deseja buscar:" << "\n";
         cin >> codigo;
         Livro *livro = arvore.buscaPorCodigo(codigo);
@@ -403,9 +410,9 @@ int main() {
         }
 
         break;
-
+      }
        //Função de busca por título
-      case 3: 
+      case 3: { 
         cout << "Digite o título do Livro que deseja buscar:" << "\n";
         cin >> titulo;
         Livro *livro = arvore.buscaPorTitulo(titulo);
@@ -416,7 +423,7 @@ int main() {
         }
         
         break;
-
+      }
       //Função de remoção
       case 4:
          cout << "Codigo do Livro que deseja remover:" << "\n";
