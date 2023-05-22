@@ -286,11 +286,7 @@ public:
   }
 
   NoArvore *remover(NoArvore *raiz, int codigo) {
-    if(raiz==nullptr) {
-        cout << "Livro nao encontrado no acervo" << "\n";
-    }
-      // verifica se o acervo esta vazio
-    else {
+
       if(codigo == raiz->valor->codigo) { 
         //Remove nos sem filhos
         if (raiz->filhoEsquerda==nullptr && raiz->filhoDireita==nullptr){
@@ -299,12 +295,13 @@ public:
         }
         //Remove no com 2 filhos
         else if(raiz->filhoEsquerda != nullptr && raiz->filhoDireita != nullptr){
-          NoArvore *aux;
+          NoArvore *aux;  
           aux = raiz->filhoEsquerda;
           while(aux->filhoDireita!=nullptr){
-            aux=aux->filhoDireita;
+            aux = aux->filhoDireita;
           } 
           raiz->valor=aux->valor;
+          aux->valor->codigo = codigo;
           raiz->filhoEsquerda = remover(raiz->filhoEsquerda, codigo);
           return raiz;
         }
@@ -326,8 +323,8 @@ public:
         }
         else raiz->filhoDireita = remover(raiz->filhoDireita, codigo); //direita
       }
-      
-    }
+      cout << "Livro removido com sucesso" << "\n";
+    atualizaAltura(raiz);
     balancearNo(raiz);
       return raiz;
   }
@@ -337,13 +334,23 @@ public:
       raiz->imprimir();
     }
   }
+  
+  void remocao (int codigo) {
+    if(raiz==nullptr) {
+      // verifica se o acervo esta vazio
+        cout << "Livro nao encontrado no acervo" << "\n";
+    }
+    else {
+      remover(raiz, codigo);
+    }
+  }
 };
 
 // Menu com as funções realizadas pelo sistema
 void menu(){
    cout << "***MENU DA BIBLIOTECA***" << "\n";
    cout << "1 - Inserir livro no acervo" << "\n";
-   cout << "2 - Buscar livro por códiogo no acervo" << "\n";
+   cout << "2 - Buscar livro por codioo no acervo" << "\n";
    cout << "3 - Buscar livro por título no acervo" << "\n";
    cout << "4 - Remover livro do acervo" << "\n";
    cout << "5 - Sair" << "\n";
@@ -403,10 +410,9 @@ int main() {
 
       //Função de remoção
       case 4:
-         cout << "Titulo do Livro que deseja remover:" << "\n";
+         cout << "Codigo do Livro que deseja remover:" << "\n";
          cin >> codigo;
-         arvore.remover(arvore.raiz, codigo);
-
+         arvore.remocao(codigo);
        break;
 
       //Saída do menu
