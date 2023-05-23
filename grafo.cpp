@@ -375,12 +375,12 @@ int main() {
   arvore.adicionar(new Livro("Metamorfose", "Franz Kafka", 6)); 
   arvore.imprimir(); 
 
-  teste = fopen("./casosTeste.txt", "r");
-  if (teste == NULL)
-{
-    printf("Problemas na leitura do arquivo\n");
-    return; // Está dando erro e impedindo o programa de compilar
-}
+//  teste = fopen("./casosTeste.txt", "r");
+//  if (teste == NULL)
+//{
+//    printf("Problemas na leitura do arquivo\n");
+//    return; // Está dando erro e impedindo o programa de compilar
+//}
   do{
     menu();
      cin >> op;
