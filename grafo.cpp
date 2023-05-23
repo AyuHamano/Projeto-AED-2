@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <cstring>
 #include <iostream>
 #include <string>
@@ -22,6 +23,12 @@ public:
     this->titulo = titulo;
     this->autor = autor;
     this->codigo = codigo;
+  }
+
+  Livro(Livro *livro) {
+    this->titulo = livro->titulo;
+    this->autor = livro->autor;
+    this->codigo = livro->codigo;
   }
 
   /**
@@ -58,9 +65,7 @@ public:
   /** Altura do no */
   int altura = 0;
 
-  NoArvore(Livro *valor) {
-    this->valor = valor;
-  }
+  NoArvore(Livro *valor) { this->valor = valor; }
 
   /**
    * Destrutor recursivo. Chama o destrutor para os filhos esquerdo e
@@ -90,6 +95,14 @@ public:
     if (filhoEsquerda) {
       filhoEsquerda->imprimir(indent + 4);
     }
+  }
+
+  NoArvore *minimo() {
+    if (filhoDireita == nullptr) {
+      return this;
+    }
+
+    return filhoDireita->minimo();
   }
 };
 
@@ -270,56 +283,62 @@ public:
     }
   }
 
-  NoArvore *remover(NoArvore *raiz, int codigo, bool *outRemovido) {
-    if (codigo == raiz->valor->codigo) {
+  NoArvore *remover(NoArvore *no, int codigo, bool *outRemovido) {
+    if (codigo == no->valor->codigo) {
       // Remove nos sem filhos
-      if (raiz->filhoEsquerda == nullptr && raiz->filhoDireita == nullptr) {
-        delete raiz;
+      if (no->filhoEsquerda == nullptr && no->filhoDireita == nullptr) {
+        delete no;
 
         *outRemovido = true;
 
         return nullptr;
       }
       // Remove no com 2 filhos
-      else if (raiz->filhoEsquerda != nullptr &&
-               raiz->filhoDireita != nullptr) {
-        NoArvore *aux;
-        aux = raiz->filhoEsquerda;
-        while (aux->filhoDireita != nullptr) {
-          aux = aux->filhoDireita;
-        }
-        raiz->valor = aux->valor;
-        codigo = aux->valor->codigo;
-        raiz->filhoEsquerda = remover(raiz->filhoEsquerda, codigo, outRemovido);
-        return raiz;
+      else if (no->filhoEsquerda != nullptr && no->filhoDireita != nullptr) {
+        NoArvore *minimo = no->filhoEsquerda->minimo();
+
+        NoArvore *sucessor = new NoArvore(new Livro(minimo->valor));
+
+        no->filhoEsquerda = remover(no->filhoEsquerda, sucessor->valor->codigo, outRemovido);
+
+        sucessor->filhoEsquerda = no->filhoEsquerda;
+        sucessor->filhoDireita = no->filhoDireita;
+
+        no->filhoDireita = nullptr;
+        no->filhoEsquerda = nullptr;
+        delete no;
+
+        *outRemovido = true;
+
+        return sucessor;
       } else {
         NoArvore *aux = nullptr;
-        if (raiz->filhoEsquerda != nullptr) {
-          aux = raiz->filhoEsquerda;
+        if (no->filhoEsquerda != nullptr) {
+          aux = no->filhoEsquerda;
         } else {
-          aux = raiz->filhoDireita;
+          aux = no->filhoDireita;
         }
 
         // Seta filhos para null para não serem liberados pelo destrutor
-        raiz->filhoEsquerda = nullptr;
-        raiz->filhoDireita = nullptr;
-        delete raiz;
+        no->filhoEsquerda = nullptr;
+        no->filhoDireita = nullptr;
+        delete no;
 
         *outRemovido = true;
 
         return aux;
       }
     } else {
-      if (codigo < raiz->valor->codigo) { // esquerda
-        raiz->filhoEsquerda = remover(raiz->filhoEsquerda, codigo, outRemovido);
+      if (codigo < no->valor->codigo) { // esquerda
+        no->filhoEsquerda = remover(no->filhoEsquerda, codigo, outRemovido);
       } else
-        raiz->filhoDireita =
-            remover(raiz->filhoDireita, codigo, outRemovido); // direita
+        no->filhoDireita =
+            remover(no->filhoDireita, codigo, outRemovido); // direita
     }
 
-    atualizaAltura(raiz);
-    raiz = balancearNo(raiz);
-    return raiz;
+    /* atualizaAltura(no); */
+    /* no = balancearNo(no); */
+    return no;
   }
 
   void imprimir() {
