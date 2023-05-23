@@ -50,19 +50,16 @@ public:
   Livro *valor;
 
   /** Ponteiro para o filho esquerdo */
-  NoArvore *filhoEsquerda; //=nullptr;
+  NoArvore *filhoEsquerda = nullptr;
 
   /** Ponteiro para o filho direito */
-  NoArvore *filhoDireita; //=nullptr;
+  NoArvore *filhoDireita = nullptr;
 
   /** Altura do no */
-  int altura;
+  int altura = 0;
 
   NoArvore(Livro *valor) {
     this->valor = valor;
-    this->altura = 0;
-    this->filhoEsquerda = nullptr;
-    this->filhoDireita = nullptr;
   }
 
   /**
@@ -337,7 +334,7 @@ public:
       return false;
     } else {
       bool removido = false;
-      remover(raiz, codigo, &removido);
+      raiz = remover(raiz, codigo, &removido);
       return removido;
     }
   }
@@ -363,7 +360,7 @@ int main() {
 
   menu();
 
-  while (cin >> op && !saiu) {
+  while (!saiu && cin >> op) {
     cin.ignore();
 
     switch (op) {
