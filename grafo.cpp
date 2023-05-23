@@ -344,7 +344,7 @@ public:
 void menu() {
   cout << "***MENU DA BIBLIOTECA***" << endl;
   cout << "1 - Inserir livro no acervo" << endl;
-  cout << "2 - Buscar livro por codioo no acervo" << endl;
+  cout << "2 - Buscar livro por codigo no acervo" << endl;
   cout << "3 - Buscar livro por título no acervo" << endl;
   cout << "4 - Remover livro do acervo" << endl;
   cout << "5 - Sair" << endl;
