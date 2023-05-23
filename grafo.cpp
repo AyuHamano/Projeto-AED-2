@@ -278,6 +278,9 @@ public:
       // Remove nos sem filhos
       if (raiz->filhoEsquerda == nullptr && raiz->filhoDireita == nullptr) {
         delete raiz;
+
+        *outRemovido = true;
+
         return nullptr;
       }
       // Remove no com 2 filhos
