@@ -1,14 +1,13 @@
+#include <cstring>
 #include <iostream>
 #include <string>
-#include <cstring>
 
 using std::string;
 using namespace std;
 
-
 /**
  * Classe que representa um livro. Cada livro possui um título, um autor e
- * um código.                                                                                                                                                                                                           
+ * um código.
  */
 class Livro {
 public:
@@ -37,7 +36,7 @@ public:
    *  cout << livro <<  endl;
    */
   operator string() const {
-    return titulo + " - " + autor + " (" +  to_string(codigo) + ")";
+    return titulo + " - " + autor + " (" + to_string(codigo) + ")";
   }
 };
 
@@ -47,7 +46,6 @@ public:
  */
 class NoArvore {
 public:
- 
   /** Valor para esse nó */
   Livro *valor;
 
@@ -60,11 +58,11 @@ public:
   /** Altura do no */
   int altura;
 
-  NoArvore(Livro *valor) { 
-    this->valor = valor;   
-    this->altura = 0; 
-	  this->filhoEsquerda=nullptr;
-	  this->filhoDireita=nullptr;
+  NoArvore(Livro *valor) {
+    this->valor = valor;
+    this->altura = 0;
+    this->filhoEsquerda = nullptr;
+    this->filhoDireita = nullptr;
   }
 
   /**
@@ -90,7 +88,7 @@ public:
       filhoDireita->imprimir(indent + 4);
     }
 
-     cout << string(indent, ' ') << string(*valor) <<  endl;
+    cout << string(indent, ' ') << string(*valor) << endl;
 
     if (filhoEsquerda) {
       filhoEsquerda->imprimir(indent + 4);
@@ -98,67 +96,66 @@ public:
   }
 };
 
-
 class Arvore {
 public:
-
   NoArvore *raiz = nullptr;
   ~Arvore() { delete raiz; }
 
-
-//---- FUNÇÕES DA ÁRVORE - INSERIR, BALANCEAR, BUSCAR E REMOVER
-//---- ADIÇÃO DE UM LIVRO
+  //---- FUNÇÕES DA ÁRVORE - INSERIR, BALANCEAR, BUSCAR E REMOVER
+  //---- ADIÇÃO DE UM LIVRO
 
   void adicionar(Livro *valor) {
-    if(raiz==nullptr) {
+    if (raiz == nullptr) {
       raiz = new NoArvore(valor);
-       cout<<"Livro adicionado com sucesso!"<<"/n";
-    }
-    else raiz = inserirLivro(raiz, valor);
+      cout << "Livro adicionado com sucesso!"
+           << "/n";
+    } else
+      raiz = inserirLivro(raiz, valor);
   }
 
   NoArvore *inserirLivro(NoArvore *no, Livro *valor) {
 
-    //esquerda 
-    if(valor->codigo < no->valor->codigo) {
-      if(no->filhoEsquerda == nullptr) { 
-          no->filhoEsquerda = new NoArvore(valor);
-           cout<<"Livro adicionado com sucesso!"<<"\n";
-      }
-      else {
+    // esquerda
+    if (valor->codigo < no->valor->codigo) {
+      if (no->filhoEsquerda == nullptr) {
+        no->filhoEsquerda = new NoArvore(valor);
+        cout << "Livro adicionado com sucesso!"
+             << "\n";
+      } else {
         no->filhoEsquerda = inserirLivro(no->filhoEsquerda, valor);
       }
-		}
-    //direita
-    if(valor->codigo > no->valor->codigo) {
-      if(no->filhoDireita == nullptr) { 
-          no->filhoDireita = new NoArvore(valor);
-           cout<<"Livro adicionado com sucesso!"<<"\n";
-      }
-      else {
+    }
+    // direita
+    if (valor->codigo > no->valor->codigo) {
+      if (no->filhoDireita == nullptr) {
+        no->filhoDireita = new NoArvore(valor);
+        cout << "Livro adicionado com sucesso!"
+             << "\n";
+      } else {
         no->filhoDireita = inserirLivro(no->filhoDireita, valor);
       }
     }
-    //se não for nenhum, então já existe
+    // se não for nenhum, então já existe
     else {
-       cout << "Código digitado já existe, tente novamente com outros dados" <<"\n";
+      cout << "Código digitado já existe, tente novamente com outros dados"
+           << "\n";
     }
 
     atualizaAltura(no);
     return balancearNo(no);
-    
   }
 
-//---- ALTURA ----
+  //---- ALTURA ----
 
   short alturaNo(NoArvore *no) {
 
-    if(no == nullptr) return -1;
-    
-    else return no->altura;
-    
+    if (no == nullptr)
+      return -1;
+
+    else
+      return no->altura;
   }
-  //a testar
+  // a testar
   void atualizaAltura(NoArvore *no) {
     short alturaEsquerda = alturaNo(no->filhoEsquerda);
     short alturaDireita = alturaNo(no->filhoDireita);
@@ -166,27 +163,27 @@ public:
   }
 
   short maior(short a, short b) {
-    return (a > b)? a : b; //'a' é maior do que 'b'? se sim retorne 'a', senão retorne 'b'
-  } 
+    return (a > b) ? a : b; //'a' é maior do que 'b'? se sim retorne 'a', senão
+                            //retorne 'b'
+  }
 
+  //---- ROTAÇÃO ----
 
-//---- ROTAÇÃO ----
-
-  NoArvore* rotacaoDireita(NoArvore *no) {//direita direita(DD)
+  NoArvore *rotacaoDireita(NoArvore *no) { // direita direita(DD)
     NoArvore *aux1, *aux2;
 
     aux1 = no->filhoEsquerda;
     aux2 = aux1->filhoDireita;
 
     aux1->filhoDireita = no;
-    no->filhoEsquerda = aux2; 
+    no->filhoEsquerda = aux2;
 
     atualizaAltura(no);
     atualizaAltura(aux1);
-  
+
     return aux1;
   }
-  NoArvore* rotacaoEsquerda(NoArvore *no) { //esquerda esquerda(EE)
+  NoArvore *rotacaoEsquerda(NoArvore *no) { // esquerda esquerda(EE)
     NoArvore *aux1, *aux2;
 
     aux1 = no->filhoDireita;
@@ -200,82 +197,84 @@ public:
     return aux1;
   }
 
-  NoArvore* rotacaoEsquerdaDireita(NoArvore* no) {//esquerda direita(ED)
+  NoArvore *rotacaoEsquerdaDireita(NoArvore *no) { // esquerda direita(ED)
     no->filhoEsquerda = rotacaoEsquerda(no->filhoEsquerda);
-    
+
     return rotacaoDireita(no);
   }
 
-  NoArvore* rotacaoDireitaEsquerda(NoArvore* no) {//diereita esquerda(DE)
+  NoArvore *rotacaoDireitaEsquerda(NoArvore *no) { // diereita esquerda(DE)
     no->filhoDireita = rotacaoDireita(no->filhoDireita);
     return rotacaoEsquerda(no);
   }
 
-
-//---- BALANCEAMENTO ----   
-//explicação sobre balanceamento: https://www.youtube.com/watch?v=oIp82CfCDoQ 
-
+  //---- BALANCEAMENTO ----
+  // explicação sobre balanceamento: https://www.youtube.com/watch?v=oIp82CfCDoQ
 
   short calculaFatorBalanceado(NoArvore *no) {
-    if(no) {
+    if (no) {
       return (alturaNo(no->filhoEsquerda) - alturaNo(no->filhoDireita));
-    }
-    else return 0;
+    } else
+      return 0;
   }
 
-  NoArvore* balancearNo(NoArvore *no) {
+  NoArvore *balancearNo(NoArvore *no) {
     short bal = calculaFatorBalanceado(no);
 
-    if(bal < -1 && calculaFatorBalanceado(no->filhoDireita) <=0) { no = rotacaoEsquerda(no); }
+    if (bal < -1 && calculaFatorBalanceado(no->filhoDireita) <= 0) {
+      no = rotacaoEsquerda(no);
+    }
 
-    else if(bal < -1 && calculaFatorBalanceado(no->filhoDireita) > 0) { no = rotacaoDireitaEsquerda(no); }
+    else if (bal < -1 && calculaFatorBalanceado(no->filhoDireita) > 0) {
+      no = rotacaoDireitaEsquerda(no);
+    }
 
-    else if(bal > 1 && calculaFatorBalanceado(no->filhoEsquerda) >=0) { no = rotacaoDireita(no); }
+    else if (bal > 1 && calculaFatorBalanceado(no->filhoEsquerda) >= 0) {
+      no = rotacaoDireita(no);
+    }
 
-    else if(bal > 1 && calculaFatorBalanceado(no->filhoEsquerda) < 0) { no = rotacaoEsquerdaDireita(no); }
+    else if (bal > 1 && calculaFatorBalanceado(no->filhoEsquerda) < 0) {
+      no = rotacaoEsquerdaDireita(no);
+    }
 
     return no;
   }
 
-  Livro *buscaPorTitulo(string titulo) {
-    return buscaPorTitulo(titulo, raiz);
-  }
- 
+  Livro *buscaPorTitulo(string titulo) { return buscaPorTitulo(titulo, raiz); }
+
   Livro *buscaPorTitulo(string titulo, NoArvore *no) {
     if (no == nullptr) {
-       
+
       return nullptr;
     }
- 
+
     int compararTitulos = no->valor->titulo.compare(titulo);
- 
+
     if (compararTitulos == 0) {
       return no->valor;
     }
- 
+
     Livro *livroEsq = buscaPorTitulo(titulo, no->filhoEsquerda);
     if (livroEsq != nullptr) {
       return livroEsq;
     }
- 
+
     Livro *livroDir = buscaPorTitulo(titulo, no->filhoDireita);
     if (livroDir != nullptr) {
       return livroDir;
     }
- 
+
     return nullptr;
   }
- 
-  Livro *buscaPorCodigo(int codigo) {
-    return buscaPorCodigo(codigo, raiz);
-  }
- 
+
+  Livro *buscaPorCodigo(int codigo) { return buscaPorCodigo(codigo, raiz); }
+
   Livro *buscaPorCodigo(int codigo, NoArvore *no) {
     if (no == nullptr) {
-       
+
       return nullptr;
     }
- 
+
     if (codigo == no->valor->codigo) {
       return no->valor;
     } else if (codigo < no->valor->codigo) {
@@ -287,46 +286,45 @@ public:
 
   NoArvore *remover(NoArvore *raiz, int codigo) {
 
-      if(codigo == raiz->valor->codigo) { 
-        //Remove nos sem filhos
-        if (raiz->filhoEsquerda==nullptr && raiz->filhoDireita==nullptr){
-          free(raiz);
-          return nullptr;
+    if (codigo == raiz->valor->codigo) {
+      // Remove nos sem filhos
+      if (raiz->filhoEsquerda == nullptr && raiz->filhoDireita == nullptr) {
+        free(raiz);
+        return nullptr;
+      }
+      // Remove no com 2 filhos
+      else if (raiz->filhoEsquerda != nullptr &&
+               raiz->filhoDireita != nullptr) {
+        NoArvore *aux;
+        aux = raiz->filhoEsquerda;
+        while (aux->filhoDireita != nullptr) {
+          aux = aux->filhoDireita;
         }
-        //Remove no com 2 filhos
-        else if(raiz->filhoEsquerda != nullptr && raiz->filhoDireita != nullptr){
-          NoArvore *aux;  
+        raiz->valor = aux->valor;
+        codigo = aux->valor->codigo;
+        raiz->filhoEsquerda = remover(raiz->filhoEsquerda, codigo);
+        return raiz;
+      } else {
+        NoArvore *aux = nullptr;
+        if (raiz->filhoEsquerda != nullptr) {
           aux = raiz->filhoEsquerda;
-          while(aux->filhoDireita!=nullptr){
-            aux = aux->filhoDireita;
-          } 
-          raiz->valor=aux->valor;
-          codigo = aux->valor->codigo;
-          raiz->filhoEsquerda = remover(raiz->filhoEsquerda, codigo);
-          return raiz;
+        } else {
+          aux = raiz->filhoDireita;
         }
-        else{
-          NoArvore *aux=nullptr;
-          if (raiz->filhoEsquerda!=nullptr){
-            aux=raiz->filhoEsquerda;
-          }
-          else {
-            aux=raiz->filhoDireita;
-          }
-          free(raiz);
-          return aux;
-        }
+        free(raiz);
+        return aux;
       }
-      else {
-        if(codigo < raiz->valor->codigo) { //esquerda
-          raiz->filhoEsquerda = remover(raiz->filhoEsquerda, codigo);
-        }
-        else raiz->filhoDireita = remover(raiz->filhoDireita, codigo); //direita
-      }
-      cout << "Livro removido com sucesso" << "\n";
+    } else {
+      if (codigo < raiz->valor->codigo) { // esquerda
+        raiz->filhoEsquerda = remover(raiz->filhoEsquerda, codigo);
+      } else
+        raiz->filhoDireita = remover(raiz->filhoDireita, codigo); // direita
+    }
+    cout << "Livro removido com sucesso"
+         << "\n";
     atualizaAltura(raiz);
     raiz = balancearNo(raiz);
-      return raiz;
+    return raiz;
   }
 
   void imprimir() {
@@ -334,115 +332,109 @@ public:
       raiz->imprimir();
     }
   }
-  
-  void remocao (int codigo) {
-    if(raiz==nullptr) {
+
+  void remocao(int codigo) {
+    if (raiz == nullptr) {
       // verifica se o acervo esta vazio
-        cout << "Livro nao encontrado no acervo" << "\n";
-    }
-    else {
+      cout << "Livro nao encontrado no acervo"
+           << "\n";
+    } else {
       remover(raiz, codigo);
     }
   }
 };
 
 // Menu com as funções realizadas pelo sistema
-void menu(){
-   cout << "***MENU DA BIBLIOTECA***" << "\n";
-   cout << "1 - Inserir livro no acervo" << "\n";
-   cout << "2 - Buscar livro por codioo no acervo" << "\n";
-   cout << "3 - Buscar livro por título no acervo" << "\n";
-   cout << "4 - Remover livro do acervo" << "\n";
-   cout << "5 - Sair" << "\n";
+void menu() {
+  cout << "***MENU DA BIBLIOTECA***"
+       << "\n";
+  cout << "1 - Inserir livro no acervo"
+       << "\n";
+  cout << "2 - Buscar livro por codioo no acervo"
+       << "\n";
+  cout << "3 - Buscar livro por título no acervo"
+       << "\n";
+  cout << "4 - Remover livro do acervo"
+       << "\n";
+  cout << "5 - Sair"
+       << "\n";
 }
 
 int main() {
   Arvore arvore;
   int codigo, op;
   string titulo, autor;
-  FILE *teste;
 
-  arvore.adicionar(new Livro("O Senhor dos Anéis", "J. R. R. Tolkien", 1));
-
-  arvore.adicionar(new Livro("O Hobbit", "J. R. R. Tolkien", 2));
-
-  arvore.adicionar(new Livro("O Silmarillion", "J. R. R. Tolkien", 3));
-
-  arvore.adicionar(new Livro("O escaravelho de ouro", "Edgar Allan Poe", 4));
-
-  arvore.adicionar(new Livro("O Guia do Mochileiro das Galáxias", "Douglas Adams", 5));
-
-  arvore.adicionar(new Livro("Metamorfose", "Franz Kafka", 6)); 
-  arvore.imprimir(); 
-
-//  teste = fopen("./casosTeste.txt", "r");
-//  if (teste == NULL)
-//{
-//    printf("Problemas na leitura do arquivo\n");
-//    return; // Está dando erro e impedindo o programa de compilar
-//}
-  do{
+  do {
     menu();
-     cin >> op;
-    switch(op){
+    cin >> op;
+    switch (op) {
 
-      //Função de inserção
-      case 1:
-         cout << "Digite o código do Livro que deseja inserir:" << "\n";
-         cin >> codigo;
-         cout << "Digite o título do Livro que deseja inserir:" << "\n";
-         cin >> titulo;
-         cout << "Digite o autor do Livro que deseja inserir:" << "\n";
-         cin >> autor;
-        arvore.adicionar(new Livro(titulo, autor, codigo));
+    // Função de inserção
+    case 1:
+      cout << "Digite o código do Livro que deseja inserir:"
+           << "\n";
+      cin >> codigo;
+      cout << "Digite o título do Livro que deseja inserir:"
+           << "\n";
+      cin >> titulo;
+      cout << "Digite o autor do Livro que deseja inserir:"
+           << "\n";
+      cin >> autor;
+      arvore.adicionar(new Livro(titulo, autor, codigo));
 
-       break;
-      
-      //Função de busca por código
-      case 2: { 
-        cout << "Digite o código do Livro que deseja buscar:" << "\n";
-        cin >> codigo;
-        Livro *livro = arvore.buscaPorCodigo(codigo);
-        if (livro == nullptr) {
-          cout << "Não possuimos um livro com esse título no acervo" << endl;
-        } else {
-          cout << "Livro encontrado: " << string(*livro) << endl;
-        }
+      break;
 
-        break;
+    // Função de busca por código
+    case 2: {
+      cout << "Digite o código do Livro que deseja buscar:"
+           << "\n";
+      cin >> codigo;
+      Livro *livro = arvore.buscaPorCodigo(codigo);
+      if (livro == nullptr) {
+        cout << "Não possuimos um livro com esse título no acervo" << endl;
+      } else {
+        cout << "Livro encontrado: " << string(*livro) << endl;
       }
-       //Função de busca por título
-      case 3: { 
-        cout << "Digite o título do Livro que deseja buscar:" << "\n";
-        cin >> titulo;
-        Livro *livro = arvore.buscaPorTitulo(titulo);
-        if (livro == nullptr) {
-          cout << "Não possuimos um livro com esse título no acervo" << endl;
-        } else {
-          cout << "Livro encontrado: " << string(*livro) << endl;
-        }
-        
-        break;
-      }
-      //Função de remoção
-      case 4:
-         cout << "Codigo do Livro que deseja remover:" << "\n";
-         cin >> codigo;
-         arvore.remocao(codigo);
-       break;
 
-      //Saída do menu
-      case 5:
-          cout << "Obrigada por utilizar o nosso sistema de biblioteca" << "\n";
-
-       break;
-
-      default:
-         cout << "Entre com uma opção válida" << "\n";
-
-       break;
+      break;
     }
-  } while(op!=5);
+      // Função de busca por título
+    case 3: {
+      cout << "Digite o título do Livro que deseja buscar:"
+           << "\n";
+      cin >> titulo;
+      Livro *livro = arvore.buscaPorTitulo(titulo);
+      if (livro == nullptr) {
+        cout << "Não possuimos um livro com esse título no acervo" << endl;
+      } else {
+        cout << "Livro encontrado: " << string(*livro) << endl;
+      }
+
+      break;
+    }
+    // Função de remoção
+    case 4:
+      cout << "Codigo do Livro que deseja remover:"
+           << "\n";
+      cin >> codigo;
+      arvore.remocao(codigo);
+      break;
+
+    // Saída do menu
+    case 5:
+      cout << "Obrigada por utilizar o nosso sistema de biblioteca"
+           << "\n";
+
+      break;
+
+    default:
+      cout << "Entre com uma opção válida"
+           << "\n";
+
+      break;
+    }
+  } while (op != 5);
 
   return 0;
 }
