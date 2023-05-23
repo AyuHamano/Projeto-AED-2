@@ -36,7 +36,7 @@ public:
    *  cout << livro <<  endl;
    */
   operator string() const {
-    return titulo + " - " + autor + " (" + to_string(codigo) + ")";
+    return " (" + to_string(codigo) + ") " + titulo + " - " + autor;
   }
 };
 
@@ -107,8 +107,6 @@ public:
   void adicionar(Livro *valor) {
     if (raiz == nullptr) {
       raiz = new NoArvore(valor);
-      cout << "Livro adicionado com sucesso!"
-           << "/n";
     } else
       raiz = inserirLivro(raiz, valor);
   }
@@ -119,8 +117,6 @@ public:
     if (valor->codigo < no->valor->codigo) {
       if (no->filhoEsquerda == nullptr) {
         no->filhoEsquerda = new NoArvore(valor);
-        cout << "Livro adicionado com sucesso!"
-             << "\n";
       } else {
         no->filhoEsquerda = inserirLivro(no->filhoEsquerda, valor);
       }
@@ -129,16 +125,9 @@ public:
     if (valor->codigo > no->valor->codigo) {
       if (no->filhoDireita == nullptr) {
         no->filhoDireita = new NoArvore(valor);
-        cout << "Livro adicionado com sucesso!"
-             << "\n";
       } else {
         no->filhoDireita = inserirLivro(no->filhoDireita, valor);
       }
-    }
-    // se não for nenhum, então já existe
-    else {
-      cout << "Código digitado já existe, tente novamente com outros dados"
-           << "\n";
     }
 
     atualizaAltura(no);
@@ -164,7 +153,7 @@ public:
 
   short maior(short a, short b) {
     return (a > b) ? a : b; //'a' é maior do que 'b'? se sim retorne 'a', senão
-                            //retorne 'b'
+                            // retorne 'b'
   }
 
   //---- ROTAÇÃO ----
@@ -284,12 +273,11 @@ public:
     }
   }
 
-  NoArvore *remover(NoArvore *raiz, int codigo) {
-
+  NoArvore *remover(NoArvore *raiz, int codigo, bool *outRemovido) {
     if (codigo == raiz->valor->codigo) {
       // Remove nos sem filhos
       if (raiz->filhoEsquerda == nullptr && raiz->filhoDireita == nullptr) {
-        free(raiz);
+        delete raiz;
         return nullptr;
       }
       // Remove no com 2 filhos
@@ -302,7 +290,7 @@ public:
         }
         raiz->valor = aux->valor;
         codigo = aux->valor->codigo;
-        raiz->filhoEsquerda = remover(raiz->filhoEsquerda, codigo);
+        raiz->filhoEsquerda = remover(raiz->filhoEsquerda, codigo, outRemovido);
         return raiz;
       } else {
         NoArvore *aux = nullptr;
@@ -311,17 +299,24 @@ public:
         } else {
           aux = raiz->filhoDireita;
         }
-        free(raiz);
+
+        // Seta filhos para null para não serem liberados pelo destrutor
+        raiz->filhoEsquerda = nullptr;
+        raiz->filhoDireita = nullptr;
+        delete raiz;
+
+        *outRemovido = true;
+
         return aux;
       }
     } else {
       if (codigo < raiz->valor->codigo) { // esquerda
-        raiz->filhoEsquerda = remover(raiz->filhoEsquerda, codigo);
+        raiz->filhoEsquerda = remover(raiz->filhoEsquerda, codigo, outRemovido);
       } else
-        raiz->filhoDireita = remover(raiz->filhoDireita, codigo); // direita
+        raiz->filhoDireita =
+            remover(raiz->filhoDireita, codigo, outRemovido); // direita
     }
-    cout << "Livro removido com sucesso"
-         << "\n";
+
     atualizaAltura(raiz);
     raiz = balancearNo(raiz);
     return raiz;
@@ -333,64 +328,74 @@ public:
     }
   }
 
-  void remocao(int codigo) {
+  bool remocao(int codigo) {
     if (raiz == nullptr) {
       // verifica se o acervo esta vazio
-      cout << "Livro nao encontrado no acervo"
-           << "\n";
+      return false;
     } else {
-      remover(raiz, codigo);
+      bool removido = false;
+      remover(raiz, codigo, &removido);
+      return removido;
     }
   }
 };
 
 // Menu com as funções realizadas pelo sistema
 void menu() {
-  cout << "***MENU DA BIBLIOTECA***"
-       << "\n";
-  cout << "1 - Inserir livro no acervo"
-       << "\n";
-  cout << "2 - Buscar livro por codioo no acervo"
-       << "\n";
-  cout << "3 - Buscar livro por título no acervo"
-       << "\n";
-  cout << "4 - Remover livro do acervo"
-       << "\n";
-  cout << "5 - Sair"
-       << "\n";
+  cout << "***MENU DA BIBLIOTECA***" << endl;
+  cout << "1 - Inserir livro no acervo" << endl;
+  cout << "2 - Buscar livro por codioo no acervo" << endl;
+  cout << "3 - Buscar livro por título no acervo" << endl;
+  cout << "4 - Remover livro do acervo" << endl;
+  cout << "5 - Sair" << endl;
 }
 
 int main() {
   Arvore arvore;
   int codigo, op;
   string titulo, autor;
+  Livro *livro;
 
-  do {
-    menu();
-    cin >> op;
+  bool saiu = false;
+
+  menu();
+
+  while (cin >> op && !saiu) {
+    cin.ignore();
+
     switch (op) {
 
     // Função de inserção
     case 1:
-      cout << "Digite o código do Livro que deseja inserir:"
-           << "\n";
+      cout << "Digite o código do Livro que deseja inserir:" << endl;
       cin >> codigo;
-      cout << "Digite o título do Livro que deseja inserir:"
-           << "\n";
-      cin >> titulo;
-      cout << "Digite o autor do Livro que deseja inserir:"
-           << "\n";
-      cin >> autor;
-      arvore.adicionar(new Livro(titulo, autor, codigo));
+      cin.ignore();
+
+      cout << "Digite o título do Livro que deseja inserir:" << endl;
+      std::getline(cin, titulo, '\n');
+
+      cout << "Digite o autor do Livro que deseja inserir:" << endl;
+      std::getline(cin, autor, '\n');
+
+      if (arvore.buscaPorCodigo(codigo)) {
+        cout << "Já possuimos um livro com esse código no acervo" << endl;
+        break;
+      }
+
+      livro = new Livro(titulo, autor, codigo);
+      arvore.adicionar(livro);
+
+      cout << "Livro inserido com sucesso!" << endl << string(*livro) << endl;
 
       break;
 
     // Função de busca por código
-    case 2: {
-      cout << "Digite o código do Livro que deseja buscar:"
-           << "\n";
+    case 2:
+      cout << "Digite o código do Livro que deseja buscar:" << endl;
       cin >> codigo;
-      Livro *livro = arvore.buscaPorCodigo(codigo);
+      cin.ignore();
+
+      livro = arvore.buscaPorCodigo(codigo);
       if (livro == nullptr) {
         cout << "Não possuimos um livro com esse título no acervo" << endl;
       } else {
@@ -398,13 +403,13 @@ int main() {
       }
 
       break;
-    }
+
       // Função de busca por título
-    case 3: {
-      cout << "Digite o título do Livro que deseja buscar:"
-           << "\n";
-      cin >> titulo;
-      Livro *livro = arvore.buscaPorTitulo(titulo);
+    case 3:
+      cout << "Digite o título do Livro que deseja buscar:" << endl;
+      std::getline(cin, autor, '\n');
+
+      livro = arvore.buscaPorTitulo(titulo);
       if (livro == nullptr) {
         cout << "Não possuimos um livro com esse título no acervo" << endl;
       } else {
@@ -412,29 +417,42 @@ int main() {
       }
 
       break;
-    }
+
     // Função de remoção
-    case 4:
-      cout << "Codigo do Livro que deseja remover:"
-           << "\n";
+    case 4: {
+      cout << "Codigo do Livro que deseja remover:" << endl;
       cin >> codigo;
-      arvore.remocao(codigo);
+      cin.ignore();
+
+      bool removido = arvore.remocao(codigo);
+
+      if (!removido) {
+        cout << "Não possuimos um livro com esse código no acervo" << endl;
+      } else {
+        cout << "Livro removido com sucesso" << endl;
+      }
+
       break;
+    }
 
     // Saída do menu
     case 5:
-      cout << "Obrigada por utilizar o nosso sistema de biblioteca"
-           << "\n";
+      saiu = true;
+      break;
 
+    case 99:
+      arvore.imprimir();
       break;
 
     default:
-      cout << "Entre com uma opção válida"
-           << "\n";
-
+      cout << "Entre com uma opção válida" << endl;
       break;
     }
-  } while (op != 5);
+
+    menu();
+  }
+
+  cout << "Obrigada por utilizar o nosso sistema de biblioteca" << endl;
 
   return 0;
 }
